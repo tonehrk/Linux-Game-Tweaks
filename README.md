@@ -1,7 +1,9 @@
 
 # LOverlay
 
-![](res/cake-piece.png) Linux overlay configurations for MangoHUD 
+![](res/cake-piece.png) Linux Overlay configurations (OpenGL and Vulkan).
+
+For: MangoHUD
 
 ## Run 
 For now, run via terminal using this command:
