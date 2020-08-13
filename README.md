@@ -1,5 +1,7 @@
+
 # LOverlay
-Linux overlay configurations for MangoHUD 
+
+![](res/cake-piece.png) Linux overlay configurations for MangoHUD 
 
 ## Run 
 For now, run via terminal using this command:
