@@ -9,9 +9,9 @@ python LOverlay.py
 
 ## Dependences 
 
-```
-Qt5
-python-setproctitle
-mesa-demos
-vulkan-tools
-```
+- [mangohud](https://github.com/flightlessmango/MangoHud)
+- Qt5
+- python-setproctitle
+- mesa-demos
+- vulkan-tools
+
