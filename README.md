@@ -1,5 +1,5 @@
 # LOverlay
-Linux overlay configurations for MangoHUD and vkBasalt (unimplemented)
+Linux overlay configurations for MangoHUD 
 
 ## Run 
 For now, run via terminal using this command:
