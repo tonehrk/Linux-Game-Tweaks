@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=LOverlay
+Exec=/usr/bin/loverlay
+Type=Application
+StartupNotify=true
+Comment=Linux Overlay game configurations
+Path=/home/tony/workspace/programas/OverlayControl
+Terminal=false
+Categories=Qt;Utility;
+Icon=loverlay
+GenericName=Linux Overlay Configurations
+Comment[es_MX]=Configurar Overlays para Juegos
