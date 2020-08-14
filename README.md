@@ -19,7 +19,8 @@ For: MangoHUD
 
 
 ## Install/Uninstall
-Run install.sh via terminal with "--install"/"--uninstall" option as sudo
+Run install.sh via terminal with "--install" or "--uninstall" option as sudo
+
 Install:
 ```
 sudo install.sh --install
