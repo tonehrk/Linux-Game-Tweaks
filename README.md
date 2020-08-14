@@ -1,7 +1,7 @@
 
 # LOverlay
 
-![](res/cake-piece.png) Linux Overlay configurations (OpenGL and Vulkan).
+![](src/res/cake-piece.png) Linux Overlay configurations (OpenGL and Vulkan).
 
 For: MangoHUD
 
