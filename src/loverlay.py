@@ -32,7 +32,7 @@ except ImportError:
 	pass
 
 from PyQt5 import uic, QtGui
-from PyQt5.QtWidgets import QMainWindow, QApplication, QFileDialog, QColorDialog, QDialog
+from PyQt5.QtWidgets import QMainWindow, QApplication, QFileDialog, QColorDialog, QDialog, QMessageBox, QInputDialog
 from PyQt5.QtGui import QColor
 from PyQt5.QtCore import QSettings, QPoint, QSize
 
@@ -75,6 +75,9 @@ class MainControl(QMainWindow):
 			if files [i][-5:] != ".conf": pass
 			elif files[i] == "MangoHud.conf" or files[i] == "glxgears.conf" or files[i] == "vkcube.conf": pass
 			else:self.conf_comBox.addItem(files[i][:-5])
+		
+		self.remove_profButton.clicked.connect(lambda:self.remove_config(self.conf_comBox.currentText()))
+		self.add_profButton.clicked.connect(lambda:self.add_config())
 		
 		cpu_color_labels = self.hud_cpu,self.hud_cpu2
 		engine_color_labels = self.hud_engine, self.hud_engine_verL, self.hud_modelL, self.hud_vulkan_driverL, self.hud_archL, self.hud_ftimeL
@@ -252,8 +255,32 @@ class MainControl(QMainWindow):
 		# finishing
 		del a
 
+	def remove_config(self, index):
 		
+		if index == "General": 
+			m_Box = QMessageBox()
+			m_Box.setIcon(QMessageBox.Information)
+			ret=m_Box.information(self, "Remove Prefile", "General profiles can't be removed")
+		else :
+			m_Box = QMessageBox()
+			m_Box.setIcon(QMessageBox.Warning)
+			ret = m_Box.question(self,'Remove Profile', 'Are you sure to remove "'+index+'" config?\nAction cannot be reversed.', m_Box.Yes | m_Box.No)
+			if ret == m_Box.Yes:
+				subprocess.run(["rm "+MH_PATH+index+".conf"], shell=True)
+				self.conf_comBox.removeItem(self.conf_comBox.currentIndex())
+				self.conf_comBox.setCurrentIndex(0)
+			else: pass
+			
+	def add_config(self):
+		i_d = QInputDialog()
+		texto = i_d.getText(self, "Add New Profile", "Insert name of app (process title): ")
+		if texto[1] == True: 
+			if self.conf_comBox.findText(texto[0]) != -1 or texto[0] == "MangoHud":
+				QMessageBox().information(self, "Add New Profile", "Can't insert"+texto[0]+"\nDuplicate or General/MangoHud problem (are the same file)")
+
+			else: self.conf_comBox.addItem(texto[0]), self.conf_comBox.setCurrentText(texto[0])
 		
+			
 	def fps_limit(self):
 		if self.fpsCombox.currentText() == "Custom":
 			self.fpsSpinbox.setEnabled(True)
@@ -564,3 +591,4 @@ if __name__=='__main__':
 
 	GUI.show()
 	sys.exit(app.exec_())
+
