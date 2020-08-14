@@ -33,5 +33,5 @@ sudo install.sh --uninstall
 ## Run without installing
 In "src" directory, run via terminal: 
 ```
-python LOverlay.py
+python loverlay.py
 ```
