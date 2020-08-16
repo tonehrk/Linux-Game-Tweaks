@@ -31,7 +31,7 @@
    <string notr="true">LOverlay</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="res/o_res.qrc">
+   <iconset>
     <normaloff>:/icons/cake-piece.svg</normaloff>:/icons/cake-piece.svg</iconset>
   </property>
   <property name="accessibleName">
@@ -86,7 +86,7 @@
         <bool>false</bool>
        </property>
        <attribute name="icon">
-        <iconset resource="res/o_res.qrc">
+        <iconset>
          <normaloff>:/icons/mango_icon.png</normaloff>:/icons/mango_icon.png</iconset>
        </attribute>
        <attribute name="title">
@@ -97,12 +97,72 @@
          <layout class="QHBoxLayout" name="horizontalLayout_4">
           <item>
            <widget class="QComboBox" name="conf_comBox">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="insertPolicy">
+             <enum>QComboBox::InsertAlphabetically</enum>
+            </property>
             <item>
              <property name="text">
               <string>General</string>
              </property>
             </item>
            </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="add_profButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>20</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>+</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="remove_profButton">
+            <property name="maximumSize">
+             <size>
+              <width>20</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>-</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
           </item>
           <item>
            <widget class="QLabel" name="fpsLabel">
@@ -1261,7 +1321,7 @@ color: black;</string>
                     <item>
                      <widget class="QPushButton" name="other_diskcolorButton">
                       <property name="enabled">
-                       <bool>false</bool>
+                       <bool>true</bool>
                       </property>
                       <property name="sizePolicy">
                        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -2982,9 +3042,7 @@ color: #FFFFFF;</string>
   <tabstop>exitButton</tabstop>
   <tabstop>saveButton</tabstop>
  </tabstops>
- <resources>
-  <include location="res/o_res.qrc"/>
- </resources>
+ <resources/>
  <connections>
   <connection>
    <sender>cpu_av_loadCBox</sender>
@@ -3067,22 +3125,6 @@ color: #FFFFFF;</string>
    </hints>
   </connection>
   <connection>
-   <sender>o_ioCBox</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>other_diskcolorButton</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>147</x>
-     <y>506</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>210</x>
-     <y>505</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
    <sender>other_ramCBox</sender>
    <signal>toggled(bool)</signal>
    <receiver>other_ramcolorButton</receiver>
@@ -3143,22 +3185,6 @@ color: #FFFFFF;</string>
     <hint type="destinationlabel">
      <x>731</x>
      <y>159</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>o_iowCBox</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>other_diskcolorButton</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>189</x>
-     <y>506</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>210</x>
-     <y>505</y>
     </hint>
    </hints>
   </connection>
