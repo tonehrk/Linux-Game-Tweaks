@@ -201,7 +201,7 @@ class MainControl(QMainWindow):
 		self.other_fpsCBox.setChecked(int(parser.get(mangoFile, "fps")))
 		self.gpu_av_loadCBox.setChecked(int(parser.get(mangoFile, "gpu_stats")))
 		self.gpu_powerCBox.setChecked(int(parser.get(mangoFile, "gpu_power")))
-		self.gpu_powerCBox.setChecked(int(parser.get(mangoFile, "gpu_temp")))
+		self.gpu_tempCBox.setChecked(int(parser.get(mangoFile, "gpu_temp")))
 		self.gpu_core_fqCBox.setChecked(int(parser.get(mangoFile, "gpu_core_clock")))
 		self.gpu_mem_fqCBox.setChecked(int(parser.get(mangoFile, "gpu_mem_clock")))	
 		self.gpu_modelCBox.setChecked(int(parser.get(mangoFile, "gpu_name")))
@@ -217,7 +217,7 @@ class MainControl(QMainWindow):
 		
 		# Other/others
 		self.o_ioCBox.setChecked(int(parser.get(mangoFile, "io_read")))
-		self.o_ioCBox.setChecked(int(parser.get(mangoFile, "io_write")))
+		self.o_iowCBox.setChecked(int(parser.get(mangoFile, "io_write")))
 		self.s_color(self.other_diskcolorButton, parser.get(mangoFile, "io_color"), "a491d3")
 		self.other_ramCBox.setChecked(int(parser.get(mangoFile, "ram")))
 		self.s_color(self.other_ramcolorButton, parser.get(mangoFile, "ram_color"),"c26693")
@@ -238,7 +238,7 @@ class MainControl(QMainWindow):
 		if a == "0" or a == "24": self.o_font_sBox.setValue(24)
 		else: self.o_font_sBox.setValue(int(a))
 		self.s_color(self.o_font_colorButton, parser.get(mangoFile, "text_color"), "ffffff")
-		if parser.get(mangoFile, "alpha") == "0": pass
+		if parser.get(mangoFile, "alpha") == "0": self.o_font_hSlider.setValue(100)
 		else: 
 			a = int(float(parser.get(mangoFile, "alpha"))*100) # <-- value 0.1 to 1.0... #.#*100 = ###.#... to int = ###
 			if a=="100": self.o_font_hLider.setValue(100)
