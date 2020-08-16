@@ -273,7 +273,7 @@ class MainControl(QMainWindow):
 			
 	def add_config(self):
 		i_d = QInputDialog()
-		texto = i_d.getText(self, "Add New Profile", "Insert name of app (process title): ")
+		texto = i_d.getText(self, "Add New Profile", 'Insert name of app (process title)\nfor wine app use: wine-"nameapp" (no ".exe"): ')
 		if texto[1] == True: 
 			if self.conf_comBox.findText(texto[0]) != -1 or texto[0] == "MangoHud":
 				QMessageBox().information(self, "Add New Profile", "Can't insert"+texto[0]+"\nDuplicate or General/MangoHud problem (are the same file)")
