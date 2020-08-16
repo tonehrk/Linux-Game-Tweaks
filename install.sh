@@ -16,16 +16,16 @@ else
 			echo "Installing"
 			echo "copying files"
 			mkdir $lib_dir
-			cp $DIR/src/*.ui $lib_dir
-			cp $DIR/src/*.py $lib_dir
-			cp -r $DIR/src/res $lib_dir
-			cp $DIR/bin/loverlay /usr/bin
-			chmod +x /usr/bin/loverlay
-			echo "... OK"
-			echo "finalizing"
-			cp $DIR/bin/loverlay.desktop /usr/share/applications
-			cp $DIR/icons/loverlay.svg /usr/share/icons/hicolor/scalable/apps
-			cp $DIR/icons/loverlay.png /usr/share/pixmaps
+			mkdir $lib_dir/src
+			/usr/bin/install -vm644 -D $DIR/src/*.ui $lib_dir
+			/usr/bin/install -vm644 -D $DIR/src/*.py $lib_dir
+			/usr/bin/install -vm644 -D $DIR/src/res/* $lib_dir/src
+			/usr/bin/install -vm644 -D $DIR/icons/loverlay.svg /usr/share/icons/hicolor/scalable/apps
+			/usr/bin/install -vm644 -D $DIR/icons/loverlay.png /usr/share/pixmaps
+			
+			/usr/bin/install -vm755 $DIR/bin/loverlay /usr/bin
+			/usr/bin/install -vm644 -D $DIR/bin/loverlay.desktop /usr/share/applications
+			/usr/bin/install -vm644 -D $DIR/bin/loverlay.metainfo.xml /usr/share/metainfo
 			echo "LOverlay successfully installed."
 		fi
 	elif [ $1 = "--uninstall" ]; then
@@ -34,11 +34,8 @@ else
 		if [ $YES_NO = "y" ] || [ $YES_NO = "yes" ] || [ $YES_NO = "YES" ] || [ $YES_NO = "NO" ];
 		then
 			echo "removing"
-			echo "removing lib/bin"
 			rm -r $lib_dir
 			rm /usr/bin/loverlay
-			echo "... OK"
-			echo "removing icons"
 			rm /usr/share/applications/loverlay.desktop
 			rm /usr/share/icons/hicolor/scalable/apps/loverlay.svg
 			rm /usr/share/pixmaps/loverlay.png
