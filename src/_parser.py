@@ -35,7 +35,7 @@ class parser ( ):
 
 		
 	def get(data, key):
-		no_key_true = "fps", "frame_timing", "cpu_stats", "gpu_stats", "\nvsync"
+		no_key_true = "fps", "frame_timing", "cpu_stats", "gpu_stats", "vsync"
 		
 		if  data.find(key) == -1:
 			
