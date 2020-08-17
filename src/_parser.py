@@ -63,6 +63,6 @@ class parser ( ):
 			return a
 		else: 
 			
-			if key == "\nram": return "0"
+			#if key == "\nram": return "0"
 			return "1"
 	
