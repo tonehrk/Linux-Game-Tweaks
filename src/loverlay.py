@@ -136,6 +136,7 @@ class MainControl(QMainWindow):
 		self.other_ramCBox.stateChanged.connect(lambda:a("ram"))
 		self.other_fpsCBox.stateChanged.connect(lambda:a("fps"))
 		self.other_timeCBox.stateChanged.connect(lambda:a("time"))
+		self.o_wineCBox.stateChanged.connect(lambda:a("wine"))
 		self.other_engineCBox.stateChanged.connect(lambda:a("engine_version"))
 		self.other_archCBox.stateChanged.connect(lambda:a("arch"))
 		self.other_hud_verCBox.stateChanged.connect(lambda:a("hud_version"))
@@ -348,6 +349,7 @@ class MainControl(QMainWindow):
 			self.hud_colors(self.gpucolorButton, self.hud_GPU)
 			self.hud_colors(self.other_frame_tcolorButton, self.hud_frame_gL)
 			self.hud_colors(self.cpu_colorButton, *cpu_color_labels)
+			self.hud_colors(self.o_winecolorButton, self.hud_wineL)
 			
 		if string == "load" or string == "position":
 			
@@ -440,8 +442,9 @@ class MainControl(QMainWindow):
 				self.hide_all(a)
 				if self.other_engineCBox.isChecked() == True: self.hud_engine.show()
 			else: self.show_all(a)
+		if string == "wine" or string == "load": self.hud_wineL.setVisible(self.o_wineCBox.isChecked())
 			
-		if string == "engine_version" or string == "load":
+		if string == "engine_version" or string == "load": 
 			self.hud_engine_verL.setVisible(self.other_engineCBox.isChecked())
 			if self.other_fpsCBox.isChecked() == False: self.hud_engine.setVisible(self.other_engineCBox.isChecked())
 			
