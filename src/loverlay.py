@@ -98,6 +98,7 @@ class MainControl(QMainWindow):
 		# other init
 		self.other_diskcolorButton.clicked.connect(lambda:self.colorButtonU(self.other_diskcolorButton, self.hud_ioL))
 		self.other_ramcolorButton.clicked.connect(lambda:self.colorButtonU(self.other_ramcolorButton, self.hud_ramL))
+		self.o_winecolorButton.clicked.connect(lambda:self.colorButtonU(self.o_winecolorButton, self.hud_wineL))
 		self.other_enginecolorButton.clicked.connect(lambda:self.colorButtonU(self.other_enginecolorButton, *engine_color_labels))
 		self.other_frame_tcolorButton.clicked.connect(lambda:self.colorButtonU(self.other_frame_tcolorButton, self.hud_frame_gL))
 		self.o_backg_colorButton.clicked.connect(lambda:self.colorButtonU(self.o_backg_colorButton, self.HUD_rectangle))
@@ -187,8 +188,8 @@ class MainControl(QMainWindow):
 		# HUD & LOG TOGGLE... pos.
 		self.hudscCombox.setCurrentText(parser.get(mangoFile, "toggle_hud"))
 		self.logCombox.setCurrentText(parser.get(mangoFile, "toggle_logging"))
-		if parser.get(mangoFile, "output_file") == "0": self.logLine.setText(os.environ['HOME']+"/mango.log")
-		else: self.logLine.setText(parser.get(mangoFile, "output_file"))
+		if parser.get(mangoFile, "output_folder") == "0": self.logLine.setText(os.environ['HOME'])
+		else: self.logLine.setText(parser.get(mangoFile, "output_folder"))
 		self.posCombox.setCurrentText(parser.get(mangoFile, "position"))
 
 		
@@ -219,11 +220,13 @@ class MainControl(QMainWindow):
 		self.o_ioCBox.setChecked(int(parser.get(mangoFile, "io_read")))
 		self.o_iowCBox.setChecked(int(parser.get(mangoFile, "io_write")))
 		self.s_color(self.other_diskcolorButton, parser.get(mangoFile, "io_color"), "a491d3")
-		self.other_ramCBox.setChecked(int(parser.get(mangoFile, "ram")))
+		self.other_ramCBox.setChecked(int(parser.get(mangoFile, "ram\n")))
 		self.s_color(self.other_ramcolorButton, parser.get(mangoFile, "ram_color"),"c26693")
 		# "fps" ya hecho arriba
 		self.s_color(self.other_enginecolorButton, parser.get(mangoFile, "engine_color"), "eb5b5b")
 		self.other_timeCBox.setChecked(int(parser.get(mangoFile, "time\n")))
+		self.o_wineCBox.setChecked(int(parser.get(mangoFile, "wine")))
+		self.s_color(self.o_winecolorButton, parser.get(mangoFile, "wine_color"), "eb5b5b")
 		self.other_engineCBox.setChecked(int(parser.get(mangoFile, "engine_version")))
 		self.other_archCBox.setChecked(int(parser.get(mangoFile, "arch")))
 		self.other_hud_verCBox.setChecked(int(parser.get(mangoFile, "version")))
@@ -288,9 +291,8 @@ class MainControl(QMainWindow):
 		
 	def selectFile(self):
 		a=self.logLine.text()
-		self.logLine.setText(QFileDialog.getExistingDirectory(self, "Select directory", os.environ['HOME'])+"/mango.log")
-		if self.logLine.text() == "/mango.log" and a =="/mango.log": self.logLine.setText (os.environ['HOME']+"/mango.log") # deprecated ?
-		elif self.logLine.text() == "/mango.log": self.logLine.setText(a)
+		self.logLine.setText(QFileDialog.getExistingDirectory(self, "Select directory", os.environ['HOME']))
+		if self.logLine.text() == "": self.logLine.setText(a)
 		
 	def _unblank(self, line, text):
 		if line.text() == "": line.setText(text)
@@ -502,7 +504,7 @@ class MainControl(QMainWindow):
 		# HUD & log accels
 		mangoFile.write("\n"+"toggle_hud="+self.hudscCombox.currentText())
 		mangoFile.write("\n"+"toggle_logging="+self.logCombox.currentText())
-		mangoFile.write("\n"+"output_file="+self.logLine.text())
+		mangoFile.write("\n"+"output_folder="+self.logLine.text())
 		mangoFile.write("\n"+"position="+self.posCombox.currentText())
 		if self.hiddencBox.isChecked() == True: mangoFile.write("\nno_display")
 		
@@ -547,6 +549,8 @@ class MainControl(QMainWindow):
 		if self.other_ramCBox.isChecked() == True: mangoFile.write("\nram"), mangoFile.write("\nram_color="+self.other_ramcolorButton.palette().color(QtGui.QPalette.Base).name()[1:])
 		# fps ya está arriba v:
 		if self.other_timeCBox.isChecked() == True: mangoFile.write("\ntime")
+		
+		if self.o_wineCBox.isChecked() == True: mangoFile.write("\nwine"), mangoFile.write("\nwine_color="+self.o_winecolorButton.palette().color(QtGui.QPalette.Base).name()[1:])
 		if self.other_engineCBox.isChecked() == True: mangoFile.write("\nengine_version")
 		mangoFile.write("\nengine_color="+self.other_enginecolorButton.palette().color(QtGui.QPalette.Base).name()[1:])
 		if self.other_archCBox.isChecked() == True: mangoFile.write("\narch")
@@ -591,4 +595,3 @@ if __name__=='__main__':
 
 	GUI.show()
 	sys.exit(app.exec_())
-

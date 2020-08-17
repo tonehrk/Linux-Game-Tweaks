@@ -522,137 +522,6 @@
                </rect>
               </property>
               <layout class="QGridLayout" name="gridLayout_5">
-               <item row="2" column="0">
-                <widget class="QGroupBox" name="cpu_groupBox">
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <property name="minimumSize">
-                  <size>
-                   <width>0</width>
-                   <height>110</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>348</width>
-                   <height>16777215</height>
-                  </size>
-                 </property>
-                 <property name="title">
-                  <string>CPU</string>
-                 </property>
-                 <layout class="QGridLayout" name="gridLayout_9">
-                  <property name="leftMargin">
-                   <number>20</number>
-                  </property>
-                  <property name="rightMargin">
-                   <number>20</number>
-                  </property>
-                  <property name="bottomMargin">
-                   <number>10</number>
-                  </property>
-                  <item row="0" column="0">
-                   <widget class="QLabel" name="cpu_nameLabel">
-                    <property name="text">
-                     <string>Name:</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="0" column="4">
-                   <widget class="QPushButton" name="cpu_colorButton">
-                    <property name="enabled">
-                     <bool>true</bool>
-                    </property>
-                    <property name="sizePolicy">
-                     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                      <horstretch>0</horstretch>
-                      <verstretch>0</verstretch>
-                     </sizepolicy>
-                    </property>
-                    <property name="maximumSize">
-                     <size>
-                      <width>20</width>
-                      <height>20</height>
-                     </size>
-                    </property>
-                    <property name="focusPolicy">
-                     <enum>Qt::NoFocus</enum>
-                    </property>
-                    <property name="toolTip">
-                     <string>Default color: #2e97cb</string>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">background: #2e97cb;
-color: black;</string>
-                    </property>
-                    <property name="text">
-                     <string/>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="2" column="3" colspan="3">
-                   <widget class="QCheckBox" name="cpu_tempCBox">
-                    <property name="text">
-                     <string>Temperature</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="2" column="0" colspan="2">
-                   <widget class="QCheckBox" name="cpu_av_loadCBox">
-                    <property name="text">
-                     <string>Av. Load</string>
-                    </property>
-                    <property name="checked">
-                     <bool>true</bool>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="2" column="2">
-                   <widget class="QCheckBox" name="cpu_by_coreCBox">
-                    <property name="enabled">
-                     <bool>true</bool>
-                    </property>
-                    <property name="text">
-                     <string>By Core</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="0" column="1" colspan="3">
-                   <widget class="QLineEdit" name="cpu_Line">
-                    <property name="inputMask">
-                     <string/>
-                    </property>
-                    <property name="text">
-                     <string>CPU</string>
-                    </property>
-                    <property name="dragEnabled">
-                     <bool>true</bool>
-                    </property>
-                    <property name="placeholderText">
-                     <string notr="true">CPU</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="0" column="5">
-                   <spacer name="horizontalSpacer_7">
-                    <property name="orientation">
-                     <enum>Qt::Horizontal</enum>
-                    </property>
-                    <property name="sizeHint" stdset="0">
-                     <size>
-                      <width>40</width>
-                      <height>20</height>
-                     </size>
-                    </property>
-                   </spacer>
-                  </item>
-                 </layout>
-                </widget>
-               </item>
                <item row="1" column="0">
                 <widget class="QGroupBox" name="gpuBox">
                  <property name="sizePolicy">
@@ -1082,7 +951,151 @@ color: black;</string>
                  </layout>
                 </widget>
                </item>
-               <item row="3" column="0">
+               <item row="2" column="0">
+                <widget class="QGroupBox" name="cpu_groupBox">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>110</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>348</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="title">
+                  <string>CPU</string>
+                 </property>
+                 <layout class="QGridLayout" name="gridLayout_9">
+                  <property name="leftMargin">
+                   <number>20</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>20</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>10</number>
+                  </property>
+                  <item row="0" column="0">
+                   <widget class="QLabel" name="cpu_nameLabel">
+                    <property name="text">
+                     <string>Name:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="4">
+                   <widget class="QPushButton" name="cpu_colorButton">
+                    <property name="enabled">
+                     <bool>true</bool>
+                    </property>
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>20</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                    <property name="focusPolicy">
+                     <enum>Qt::NoFocus</enum>
+                    </property>
+                    <property name="toolTip">
+                     <string>Default color: #2e97cb</string>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background: #2e97cb;
+color: black;</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="3" colspan="3">
+                   <widget class="QCheckBox" name="cpu_tempCBox">
+                    <property name="text">
+                     <string>Temperature</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="0" colspan="2">
+                   <widget class="QCheckBox" name="cpu_av_loadCBox">
+                    <property name="text">
+                     <string>Av. Load</string>
+                    </property>
+                    <property name="checked">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="2">
+                   <widget class="QCheckBox" name="cpu_by_coreCBox">
+                    <property name="enabled">
+                     <bool>true</bool>
+                    </property>
+                    <property name="text">
+                     <string>By Core</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="1" colspan="3">
+                   <widget class="QLineEdit" name="cpu_Line">
+                    <property name="inputMask">
+                     <string/>
+                    </property>
+                    <property name="text">
+                     <string>CPU</string>
+                    </property>
+                    <property name="dragEnabled">
+                     <bool>true</bool>
+                    </property>
+                    <property name="placeholderText">
+                     <string notr="true">CPU</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="5">
+                   <spacer name="horizontalSpacer_7">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>40</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item row="4" column="0">
+                <spacer name="verticalSpacer_3">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item row="5" column="0">
                 <widget class="QGroupBox" name="miscBox">
                  <property name="minimumSize">
                   <size>
@@ -1109,54 +1122,12 @@ color: black;</string>
                   <property name="bottomMargin">
                    <number>10</number>
                   </property>
-                  <item row="3" column="1">
-                   <layout class="QHBoxLayout" name="horizontalLayout_2">
-                    <item>
-                     <widget class="QCheckBox" name="other_mediaCBox">
-                      <property name="minimumSize">
-                       <size>
-                        <width>0</width>
-                        <height>0</height>
-                       </size>
-                      </property>
-                      <property name="text">
-                       <string>Media Data</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QPushButton" name="o_mediacolorButton">
-                      <property name="enabled">
-                       <bool>false</bool>
-                      </property>
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="maximumSize">
-                       <size>
-                        <width>20</width>
-                        <height>20</height>
-                       </size>
-                      </property>
-                      <property name="focusPolicy">
-                       <enum>Qt::NoFocus</enum>
-                      </property>
-                      <property name="toolTip">
-                       <string>Default color: #FFFFFF</string>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">background: #ffffff;
-color: black;</string>
-                      </property>
-                      <property name="text">
-                       <string/>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
+                  <item row="4" column="2">
+                   <widget class="QCheckBox" name="other_hud_verCBox">
+                    <property name="text">
+                     <string>HUD version</string>
+                    </property>
+                   </widget>
                   </item>
                   <item row="1" column="0">
                    <layout class="QHBoxLayout" name="horizontalLayout_7">
@@ -1207,55 +1178,15 @@ color: black;</string>
                     </item>
                    </layout>
                   </item>
-                  <item row="2" column="1">
-                   <widget class="QCheckBox" name="other_hud_verCBox">
-                    <property name="text">
-                     <string>HUD version</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="0" column="1">
-                   <layout class="QHBoxLayout" name="horizontalLayout_11">
+                  <item row="3" column="0">
+                   <layout class="QHBoxLayout" name="horizontalLayout">
                     <property name="rightMargin">
-                     <number>0</number>
+                     <number>30</number>
                     </property>
                     <item>
-                     <widget class="QCheckBox" name="other_engineCBox">
+                     <widget class="QCheckBox" name="other_fpsCBox">
                       <property name="text">
-                       <string>Engine+version</string>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </item>
-                  <item row="1" column="1">
-                   <widget class="QCheckBox" name="other_archCBox">
-                    <property name="text">
-                     <string>Architecture</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="5" column="0">
-                   <layout class="QVBoxLayout" name="verticalLayout">
-                    <property name="leftMargin">
-                     <number>20</number>
-                    </property>
-                    <item>
-                     <widget class="QRadioButton" name="other_graph_rButton">
-                      <property name="enabled">
-                       <bool>true</bool>
-                      </property>
-                      <property name="minimumSize">
-                       <size>
-                        <width>93</width>
-                        <height>0</height>
-                       </size>
-                      </property>
-                      <property name="layoutDirection">
-                       <enum>Qt::LeftToRight</enum>
-                      </property>
-                      <property name="text">
-                       <string>Graph</string>
+                       <string>Engine/FPS</string>
                       </property>
                       <property name="checked">
                        <bool>true</bool>
@@ -1263,18 +1194,103 @@ color: black;</string>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QRadioButton" name="other_histogram_rButton">
+                     <widget class="QPushButton" name="other_enginecolorButton">
                       <property name="enabled">
                        <bool>true</bool>
                       </property>
-                      <property name="minimumSize">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="maximumSize">
                        <size>
-                        <width>93</width>
-                        <height>0</height>
+                        <width>20</width>
+                        <height>20</height>
                        </size>
                       </property>
+                      <property name="focusPolicy">
+                       <enum>Qt::NoFocus</enum>
+                      </property>
+                      <property name="toolTip">
+                       <string>Default color: #eb5b5b</string>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">background: #eb5b5b;
+color: black;</string>
+                      </property>
                       <property name="text">
-                       <string>Histogram</string>
+                       <string/>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                  <item row="3" column="2">
+                   <widget class="QCheckBox" name="other_archCBox">
+                    <property name="text">
+                     <string>Architecture</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="8" column="2">
+                   <spacer name="verticalSpacer_2">
+                    <property name="orientation">
+                     <enum>Qt::Vertical</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>20</width>
+                      <height>40</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                  <item row="5" column="0">
+                   <layout class="QHBoxLayout" name="horizontalLayout_8">
+                    <property name="rightMargin">
+                     <number>30</number>
+                    </property>
+                    <item>
+                     <widget class="QCheckBox" name="other_frame_tCBox">
+                      <property name="text">
+                       <string>Frametime</string>
+                      </property>
+                      <property name="checked">
+                       <bool>true</bool>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="other_frame_tcolorButton">
+                      <property name="enabled">
+                       <bool>true</bool>
+                      </property>
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>20</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="focusPolicy">
+                       <enum>Qt::NoFocus</enum>
+                      </property>
+                      <property name="toolTip">
+                       <string>Default color: #00ff00</string>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">background: #00ff00;
+color: black;</string>
+                      </property>
+                      <property name="text">
+                       <string/>
                       </property>
                      </widget>
                     </item>
@@ -1352,38 +1368,46 @@ color: black;</string>
                     </item>
                    </layout>
                   </item>
-                  <item row="5" column="1">
-                   <spacer name="verticalSpacer_2">
-                    <property name="orientation">
-                     <enum>Qt::Vertical</enum>
+                  <item row="4" column="0">
+                   <widget class="QCheckBox" name="other_timeCBox">
+                    <property name="text">
+                     <string>Time</string>
                     </property>
-                    <property name="sizeHint" stdset="0">
-                     <size>
-                      <width>20</width>
-                      <height>40</height>
-                     </size>
-                    </property>
-                   </spacer>
+                   </widget>
                   </item>
-                  <item row="2" column="0">
-                   <layout class="QHBoxLayout" name="horizontalLayout">
+                  <item row="1" column="2">
+                   <layout class="QHBoxLayout" name="horizontalLayout_11">
                     <property name="rightMargin">
-                     <number>30</number>
+                     <number>0</number>
                     </property>
                     <item>
-                     <widget class="QCheckBox" name="other_fpsCBox">
+                     <widget class="QCheckBox" name="other_engineCBox">
                       <property name="text">
-                       <string>Engine/FPS</string>
+                       <string>Engine+version</string>
                       </property>
-                      <property name="checked">
-                       <bool>true</bool>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                  <item row="5" column="2">
+                   <layout class="QHBoxLayout" name="horizontalLayout_2">
+                    <item>
+                     <widget class="QCheckBox" name="other_mediaCBox">
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>0</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string>Media Data</string>
                       </property>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QPushButton" name="other_enginecolorButton">
+                     <widget class="QPushButton" name="o_mediacolorButton">
                       <property name="enabled">
-                       <bool>true</bool>
+                       <bool>false</bool>
                       </property>
                       <property name="sizePolicy">
                        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -1401,10 +1425,10 @@ color: black;</string>
                        <enum>Qt::NoFocus</enum>
                       </property>
                       <property name="toolTip">
-                       <string>Default color: #eb5b5b</string>
+                       <string>Default color: #FFFFFF</string>
                       </property>
                       <property name="styleSheet">
-                       <string notr="true">background: #eb5b5b;
+                       <string notr="true">background: #ffffff;
 color: black;</string>
                       </property>
                       <property name="text">
@@ -1414,7 +1438,52 @@ color: black;</string>
                     </item>
                    </layout>
                   </item>
-                  <item row="4" column="1">
+                  <item row="7" column="0">
+                   <layout class="QVBoxLayout" name="verticalLayout">
+                    <property name="leftMargin">
+                     <number>20</number>
+                    </property>
+                    <item>
+                     <widget class="QRadioButton" name="other_graph_rButton">
+                      <property name="enabled">
+                       <bool>true</bool>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>93</width>
+                        <height>0</height>
+                       </size>
+                      </property>
+                      <property name="layoutDirection">
+                       <enum>Qt::LeftToRight</enum>
+                      </property>
+                      <property name="text">
+                       <string>Graph</string>
+                      </property>
+                      <property name="checked">
+                       <bool>true</bool>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QRadioButton" name="other_histogram_rButton">
+                      <property name="enabled">
+                       <bool>true</bool>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>93</width>
+                        <height>0</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string>Histogram</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                  <item row="7" column="2">
                    <widget class="QComboBox" name="other_mediacomBox">
                     <property name="enabled">
                      <bool>false</bool>
@@ -1447,30 +1516,17 @@ color: black;</string>
                     </item>
                    </widget>
                   </item>
-                  <item row="3" column="0">
-                   <widget class="QCheckBox" name="other_timeCBox">
-                    <property name="text">
-                     <string>Time</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="4" column="0">
-                   <layout class="QHBoxLayout" name="horizontalLayout_8">
-                    <property name="rightMargin">
-                     <number>30</number>
-                    </property>
+                  <item row="0" column="2">
+                   <layout class="QHBoxLayout" name="horizontalLayout_3">
                     <item>
-                     <widget class="QCheckBox" name="other_frame_tCBox">
+                     <widget class="QCheckBox" name="o_wineCBox">
                       <property name="text">
-                       <string>Frametime</string>
-                      </property>
-                      <property name="checked">
-                       <bool>true</bool>
+                       <string>Wine version</string>
                       </property>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QPushButton" name="other_frame_tcolorButton">
+                     <widget class="QPushButton" name="o_winecolorButton">
                       <property name="enabled">
                        <bool>true</bool>
                       </property>
@@ -1490,10 +1546,10 @@ color: black;</string>
                        <enum>Qt::NoFocus</enum>
                       </property>
                       <property name="toolTip">
-                       <string>Default color: #00ff00</string>
+                       <string>Default color: #a491d3</string>
                       </property>
                       <property name="styleSheet">
-                       <string notr="true">background: #00ff00;
+                       <string notr="true">background: #eb5b5b;
 color: black;</string>
                       </property>
                       <property name="text">
@@ -1505,19 +1561,6 @@ color: black;</string>
                   </item>
                  </layout>
                 </widget>
-               </item>
-               <item row="4" column="0">
-                <spacer name="verticalSpacer_3">
-                 <property name="orientation">
-                  <enum>Qt::Vertical</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>20</width>
-                   <height>40</height>
-                  </size>
-                 </property>
-                </spacer>
                </item>
               </layout>
              </widget>
@@ -2172,6 +2215,23 @@ color: #eb5b5b;</string>
                         </property>
                         <property name="text">
                          <string>64bits</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="hud_wineL">
+                        <property name="font">
+                         <font>
+                          <family>Unispace</family>
+                          <pointsize>8</pointsize>
+                         </font>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">background-color: #00FFFFFF;
+color: #eb5b5b;</string>
+                        </property>
+                        <property name="text">
+                         <string>Wine/Proton</string>
                         </property>
                        </widget>
                       </item>
