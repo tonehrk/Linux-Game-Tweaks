@@ -360,8 +360,8 @@ class MainControl(QMainWindow):
 			br=self.hud_wbuttom, self.hud_wright
 			if a == "top-left": self.hide_all(tl), self.show_all(br)
 			if a == "top-right": self.hide_all(tr), self.show_all(bl)
-			if a == "buttom-left": self.hide_all(bl), self.show_all(tr)
-			if a == "buttom-right": self.hide_all(br), self.show_all(tl)
+			if a == "bottom-left": self.hide_all(bl), self.show_all(tr)
+			if a == "bottom-right": self.hide_all(br), self.show_all(tl)
 			
 					
 		if string == "hud_version" or string == "load": self.hud_hud_versionL.setVisible(self.other_hud_verCBox.isChecked())
