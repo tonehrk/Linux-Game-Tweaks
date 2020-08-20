@@ -422,12 +422,12 @@
             </item>
             <item>
              <property name="text">
-              <string>buttom-left</string>
+              <string>bottom-left</string>
              </property>
             </item>
             <item>
              <property name="text">
-              <string>buttom-right</string>
+              <string>bottom-right</string>
              </property>
             </item>
            </widget>
