@@ -3,6 +3,8 @@
 
 ![](src/res/cake-piece.png) Linux Overlay configurations (OpenGL and Vulkan).
 
+![](assets/ksnip_20200824-154156.png)
+
 For: MangoHUD
 
 ## Dependences 
