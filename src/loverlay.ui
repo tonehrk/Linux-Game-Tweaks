@@ -12,7 +12,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>996</width>
+    <width>1184</width>
     <height>763</height>
    </rect>
   </property>
@@ -256,29 +256,13 @@
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="logLine">
-            <property name="enabled">
-             <bool>false</bool>
-            </property>
-            <property name="font">
-             <font>
-              <italic>true</italic>
-              <stylestrategy>PreferAntialias</stylestrategy>
-             </font>
-            </property>
-            <property name="acceptDrops">
-             <bool>true</bool>
-            </property>
-            <property name="text">
-             <string/>
-            </property>
-            <property name="frame">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item>
            <widget class="QPushButton" name="logButton">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>32</height>
+             </size>
+            </property>
             <property name="autoFillBackground">
              <bool>false</bool>
             </property>
@@ -430,6 +414,49 @@
               <string>bottom-right</string>
              </property>
             </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>x:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="x_offset_sBox">
+            <property name="accelerated">
+             <bool>true</bool>
+            </property>
+            <property name="minimum">
+             <number>-3840</number>
+            </property>
+            <property name="maximum">
+             <number>3840</number>
+            </property>
+            <property name="stepType">
+             <enum>QAbstractSpinBox::DefaultStepType</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>y:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="y_offset_sBox">
+            <property name="accelerated">
+             <bool>true</bool>
+            </property>
+            <property name="minimum">
+             <number>-2160</number>
+            </property>
+            <property name="maximum">
+             <number>2160</number>
+            </property>
            </widget>
           </item>
           <item>
@@ -1889,7 +1916,7 @@ color: black;</string>
                </spacer>
               </item>
               <item row="3" column="1" colspan="9">
-               <widget class="QFrame" name="frame">
+               <widget class="QFrame" name="HUD_frame">
                 <property name="enabled">
                  <bool>false</bool>
                 </property>
@@ -1917,1091 +1944,1088 @@ color: black;</string>
                 <property name="frameShadow">
                  <enum>QFrame::Raised</enum>
                 </property>
-                <layout class="QGridLayout" name="gridLayout_8">
-                 <item row="1" column="2">
-                  <widget class="QWidget" name="hud_wright" native="true">
-                   <property name="styleSheet">
-                    <string notr="true">background-color: #00FFFFFF;</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="0" column="1">
-                  <widget class="QWidget" name="hud_wtop" native="true">
-                   <property name="styleSheet">
-                    <string notr="true">background-color: #00FFFFFF;</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="2" column="1">
-                  <widget class="QWidget" name="hud_wbuttom" native="true">
-                   <property name="styleSheet">
-                    <string notr="true">background-color: #00FFFFFF;</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="1" column="0">
-                  <widget class="QWidget" name="hud_wleft" native="true">
-                   <property name="styleSheet">
-                    <string notr="true">background-color: #00FFFFFF;</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="1" column="1">
-                  <widget class="QWidget" name="HUD_rectangle" native="true">
-                   <property name="sizePolicy">
-                    <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                     <horstretch>0</horstretch>
-                     <verstretch>0</verstretch>
-                    </sizepolicy>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>312</width>
-                     <height>16777215</height>
-                    </size>
-                   </property>
-                   <property name="font">
-                    <font>
-                     <family>Unispace</family>
-                     <pointsize>18</pointsize>
-                     <weight>50</weight>
-                     <italic>false</italic>
-                     <bold>false</bold>
-                    </font>
-                   </property>
-                   <property name="layoutDirection">
-                    <enum>Qt::RightToLeft</enum>
-                   </property>
-                   <property name="autoFillBackground">
-                    <bool>false</bool>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">background-color: #7F000000;
+                <widget class="QWidget" name="HUD_rectangle" native="true">
+                 <property name="geometry">
+                  <rect>
+                   <x>189</x>
+                   <y>31</y>
+                   <width>263</width>
+                   <height>438</height>
+                  </rect>
+                 </property>
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>312</width>
+                   <height>438</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Unispace</family>
+                   <pointsize>18</pointsize>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
+                  </font>
+                 </property>
+                 <property name="layoutDirection">
+                  <enum>Qt::RightToLeft</enum>
+                 </property>
+                 <property name="autoFillBackground">
+                  <bool>false</bool>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">background-color: #7F000000;
 border-radius: 10px;
 </string>
-                   </property>
-                   <layout class="QGridLayout" name="gridLayout_10">
-                    <item row="8" column="2">
-                     <widget class="QLabel" name="hud_ramL">
-                      <property name="maximumSize">
-                       <size>
-                        <width>16777215</width>
-                        <height>19</height>
-                       </size>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Unispace</family>
-                        <pointsize>14</pointsize>
-                        <kerning>true</kerning>
-                       </font>
-                      </property>
-                      <property name="mouseTracking">
-                       <bool>false</bool>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">background-color: #00FFFFFF;
-color: #c26693;</string>
-                      </property>
-                      <property name="text">
-                       <string>RAM</string>
-                      </property>
-                      <property name="scaledContents">
-                       <bool>false</bool>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="4" column="1">
-                     <widget class="QLabel" name="hud_cpu_usageL">
-                      <property name="maximumSize">
-                       <size>
-                        <width>16777215</width>
-                        <height>19</height>
-                       </size>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Unispace</family>
-                        <pointsize>14</pointsize>
-                        <kerning>true</kerning>
-                       </font>
-                      </property>
-                      <property name="mouseTracking">
-                       <bool>false</bool>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">background-color: #00FFFFFF;
-color: #FFFFFF;</string>
-                      </property>
-                      <property name="text">
-                       <string>99%</string>
-                      </property>
-                      <property name="scaledContents">
-                       <bool>false</bool>
-                      </property>
-                      <property name="alignment">
-                       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="4" column="0">
-                     <widget class="QLabel" name="hud_cpu_tempL">
-                      <property name="maximumSize">
-                       <size>
-                        <width>16777215</width>
-                        <height>19</height>
-                       </size>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Unispace</family>
-                        <pointsize>14</pointsize>
-                        <kerning>true</kerning>
-                       </font>
-                      </property>
-                      <property name="mouseTracking">
-                       <bool>false</bool>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">background-color: #00FFFFFF;
-color: #FFFFFF;</string>
-                      </property>
-                      <property name="text">
-                       <string>60°C</string>
-                      </property>
-                      <property name="scaledContents">
-                       <bool>false</bool>
-                      </property>
-                      <property name="alignment">
-                       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="5" column="1">
-                     <widget class="QLabel" name="hud_cpu_usage2">
-                      <property name="maximumSize">
-                       <size>
-                        <width>16777215</width>
-                        <height>19</height>
-                       </size>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Unispace</family>
-                        <pointsize>14</pointsize>
-                        <kerning>true</kerning>
-                       </font>
-                      </property>
-                      <property name="mouseTracking">
-                       <bool>false</bool>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">background-color: #00FFFFFF;
-color: #FFFFFF;</string>
-                      </property>
-                      <property name="text">
-                       <string>99%</string>
-                      </property>
-                      <property name="scaledContents">
-                       <bool>false</bool>
-                      </property>
-                      <property name="alignment">
-                       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="10" column="0" colspan="3">
-                     <layout class="QVBoxLayout" name="verticalLayout_2">
-                      <item>
-                       <widget class="QLabel" name="hud_engine_verL">
-                        <property name="minimumSize">
-                         <size>
-                          <width>0</width>
-                          <height>9</height>
-                         </size>
-                        </property>
-                        <property name="maximumSize">
-                         <size>
-                          <width>16777215</width>
-                          <height>9</height>
-                         </size>
-                        </property>
-                        <property name="font">
-                         <font>
-                          <family>Unispace</family>
-                          <pointsize>8</pointsize>
-                         </font>
-                        </property>
-                        <property name="styleSheet">
-                         <string notr="true">background-color: #00FFFFFF;
-color: #eb5b5b;</string>
-                        </property>
-                        <property name="text">
-                         <string>4.6</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QLabel" name="hud_modelL">
-                        <property name="minimumSize">
-                         <size>
-                          <width>0</width>
-                          <height>9</height>
-                         </size>
-                        </property>
-                        <property name="maximumSize">
-                         <size>
-                          <width>16777215</width>
-                          <height>9</height>
-                         </size>
-                        </property>
-                        <property name="font">
-                         <font>
-                          <family>Unispace</family>
-                          <pointsize>8</pointsize>
-                         </font>
-                        </property>
-                        <property name="styleSheet">
-                         <string notr="true">background-color: #00FFFFFF;
-color: #eb5b5b;</string>
-                        </property>
-                        <property name="text">
-                         <string>RADEON RX/NVIDIA GTX</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QLabel" name="hud_vulkan_driverL">
-                        <property name="font">
-                         <font>
-                          <family>Unispace</family>
-                          <pointsize>8</pointsize>
-                          <weight>75</weight>
-                          <bold>true</bold>
-                         </font>
-                        </property>
-                        <property name="styleSheet">
-                         <string notr="true">background-color: #00FFFFFF;
-color: #eb5b5b;</string>
-                        </property>
-                        <property name="text">
-                         <string>AMD RADV/ NVIDIA 390.xx</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QLabel" name="hud_archL">
-                        <property name="minimumSize">
-                         <size>
-                          <width>0</width>
-                          <height>9</height>
-                         </size>
-                        </property>
-                        <property name="maximumSize">
-                         <size>
-                          <width>16777215</width>
-                          <height>9</height>
-                         </size>
-                        </property>
-                        <property name="font">
-                         <font>
-                          <family>Unispace</family>
-                          <pointsize>8</pointsize>
-                         </font>
-                        </property>
-                        <property name="styleSheet">
-                         <string notr="true">background-color: #00FFFFFF;
-color: #eb5b5b;</string>
-                        </property>
-                        <property name="text">
-                         <string>64bits</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QLabel" name="hud_wineL">
-                        <property name="font">
-                         <font>
-                          <family>Unispace</family>
-                          <pointsize>8</pointsize>
-                         </font>
-                        </property>
-                        <property name="styleSheet">
-                         <string notr="true">background-color: #00FFFFFF;
-color: #eb5b5b;</string>
-                        </property>
-                        <property name="text">
-                         <string>Wine/Proton</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QLabel" name="hud_ftimeL">
-                        <property name="minimumSize">
-                         <size>
-                          <width>0</width>
-                          <height>9</height>
-                         </size>
-                        </property>
-                        <property name="maximumSize">
-                         <size>
-                          <width>16777215</width>
-                          <height>9</height>
-                         </size>
-                        </property>
-                        <property name="font">
-                         <font>
-                          <family>Unispace</family>
-                          <pointsize>8</pointsize>
-                         </font>
-                        </property>
-                        <property name="styleSheet">
-                         <string notr="true">background-color: #00FFFFFF;
-color: #eb5b5b;</string>
-                        </property>
-                        <property name="text">
-                         <string>frametime</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QLabel" name="hud_ftime_msL">
-                        <property name="maximumSize">
-                         <size>
-                          <width>16777215</width>
-                          <height>10</height>
-                         </size>
-                        </property>
-                        <property name="font">
-                         <font>
-                          <family>Unispace</family>
-                          <pointsize>10</pointsize>
-                         </font>
-                        </property>
-                        <property name="styleSheet">
-                         <string notr="true">background-color: #00FFFFFF;
-color: #FFFFFF;</string>
-                        </property>
-                        <property name="text">
-                         <string>13.3 ms</string>
-                        </property>
-                        <property name="alignment">
-                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QLabel" name="hud_frame_gL">
-                        <property name="minimumSize">
-                         <size>
-                          <width>0</width>
-                          <height>45</height>
-                         </size>
-                        </property>
-                        <property name="font">
-                         <font>
-                          <family>Unispace</family>
-                         </font>
-                        </property>
-                        <property name="styleSheet">
-                         <string notr="true">background-color: #00FFFFFF;
-color: #00FF00;</string>
-                        </property>
-                        <property name="text">
-                         <string>----------------------------------</string>
-                        </property>
-                        <property name="margin">
-                         <number>14</number>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QLabel" name="hud_mediaL">
-                        <property name="minimumSize">
-                         <size>
-                          <width>0</width>
-                          <height>9</height>
-                         </size>
-                        </property>
-                        <property name="maximumSize">
-                         <size>
-                          <width>16777215</width>
-                          <height>9</height>
-                         </size>
-                        </property>
-                        <property name="font">
-                         <font>
-                          <family>Unispace</family>
-                          <pointsize>8</pointsize>
-                         </font>
-                        </property>
-                        <property name="styleSheet">
-                         <string notr="true">background-color: #00FFFFFF;
-color: #FFFFFF;</string>
-                        </property>
-                        <property name="text">
-                         <string>Playing: Artist - Song</string>
-                        </property>
-                       </widget>
-                      </item>
-                     </layout>
-                    </item>
-                    <item row="6" column="0">
-                     <widget class="QLabel" name="hud_io_writeL">
-                      <property name="maximumSize">
-                       <size>
-                        <width>16777215</width>
-                        <height>19</height>
-                       </size>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Unispace</family>
-                        <pointsize>14</pointsize>
-                        <kerning>true</kerning>
-                       </font>
-                      </property>
-                      <property name="mouseTracking">
-                       <bool>true</bool>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">background-color: #00FFFFFF;
-color: #FFFFFF;</string>
-                      </property>
-                      <property name="text">
-                       <string>0.0&lt;sup&gt;MiB/s</string>
-                      </property>
-                      <property name="scaledContents">
-                       <bool>false</bool>
-                      </property>
-                      <property name="alignment">
-                       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="6" column="2">
-                     <widget class="QLabel" name="hud_ioL">
-                      <property name="maximumSize">
-                       <size>
-                        <width>16777215</width>
-                        <height>19</height>
-                       </size>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Unispace</family>
-                        <pointsize>14</pointsize>
-                        <kerning>true</kerning>
-                       </font>
-                      </property>
-                      <property name="mouseTracking">
-                       <bool>false</bool>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">background-color: #00FFFFFF;
+                 </property>
+                 <layout class="QGridLayout" name="HUD_layout" columnstretch="10,10,10" columnminimumwidth="6,6,6">
+                  <property name="sizeConstraint">
+                   <enum>QLayout::SetFixedSize</enum>
+                  </property>
+                  <property name="leftMargin">
+                   <number>15</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>15</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>15</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>15</number>
+                  </property>
+                  <property name="horizontalSpacing">
+                   <number>35</number>
+                  </property>
+                  <property name="verticalSpacing">
+                   <number>0</number>
+                  </property>
+                  <item row="6" column="2">
+                   <widget class="QLabel" name="hud_ioL">
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>19</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Unispace</family>
+                      <pointsize>14</pointsize>
+                      <kerning>true</kerning>
+                     </font>
+                    </property>
+                    <property name="mouseTracking">
+                     <bool>false</bool>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background-color: #00FFFFFF;
 color: #a491d3;</string>
-                      </property>
-                      <property name="text">
-                       <string>IO RW</string>
-                      </property>
-                      <property name="scaledContents">
-                       <bool>false</bool>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="3" column="0">
-                     <widget class="QLabel" name="hud_gpu_wattsL">
-                      <property name="maximumSize">
-                       <size>
-                        <width>16777215</width>
-                        <height>19</height>
-                       </size>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Unispace</family>
-                        <pointsize>14</pointsize>
-                        <kerning>true</kerning>
-                       </font>
-                      </property>
-                      <property name="mouseTracking">
-                       <bool>true</bool>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">background-color: #00FFFFFF;
+                    </property>
+                    <property name="text">
+                     <string>IO RW</string>
+                    </property>
+                    <property name="scaledContents">
+                     <bool>false</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="8" column="1">
+                   <widget class="QLabel" name="hud_ram_useL">
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>19</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Unispace</family>
+                      <pointsize>14</pointsize>
+                      <kerning>true</kerning>
+                     </font>
+                    </property>
+                    <property name="mouseTracking">
+                     <bool>true</bool>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background-color: #00FFFFFF;
 color: #FFFFFF;</string>
-                      </property>
-                      <property name="text">
-                       <string>75&lt;sup&gt;w&lt;/sup&gt;</string>
-                      </property>
-                      <property name="textFormat">
-                       <enum>Qt::AutoText</enum>
-                      </property>
-                      <property name="scaledContents">
-                       <bool>false</bool>
-                      </property>
-                      <property name="alignment">
-                       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="7" column="2">
-                     <widget class="QLabel" name="hud_vram">
-                      <property name="maximumSize">
-                       <size>
-                        <width>16777215</width>
-                        <height>19</height>
-                       </size>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Unispace</family>
-                        <pointsize>14</pointsize>
-                        <kerning>true</kerning>
-                       </font>
-                      </property>
-                      <property name="mouseTracking">
-                       <bool>false</bool>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">background-color: #00FFFFFF;
-color: #ad64c1;</string>
-                      </property>
-                      <property name="text">
-                       <string>VRAM</string>
-                      </property>
-                      <property name="scaledContents">
-                       <bool>false</bool>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="5" column="0">
-                     <widget class="QLabel" name="hud_cpu_clockL">
-                      <property name="maximumSize">
-                       <size>
-                        <width>16777215</width>
-                        <height>19</height>
-                       </size>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Unispace</family>
-                        <pointsize>14</pointsize>
-                        <kerning>true</kerning>
-                       </font>
-                      </property>
-                      <property name="mouseTracking">
-                       <bool>true</bool>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">background-color: #00FFFFFF;
+                    </property>
+                    <property name="text">
+                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;7.9&lt;span style=&quot; vertical-align:super;&quot;&gt;GiB&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                    </property>
+                    <property name="scaledContents">
+                     <bool>false</bool>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="4" column="1">
+                   <widget class="QLabel" name="hud_cpu_usageL">
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>19</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Unispace</family>
+                      <pointsize>14</pointsize>
+                      <kerning>true</kerning>
+                     </font>
+                    </property>
+                    <property name="mouseTracking">
+                     <bool>false</bool>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background-color: #00FFFFFF;
 color: #FFFFFF;</string>
-                      </property>
-                      <property name="text">
-                       <string>3200&lt;sup&gt;Mhz&lt;/sup&gt;</string>
-                      </property>
-                      <property name="scaledContents">
-                       <bool>false</bool>
-                      </property>
-                      <property name="alignment">
-                       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="6" column="1">
-                     <widget class="QLabel" name="hud_io_readL">
-                      <property name="maximumSize">
-                       <size>
-                        <width>16777215</width>
-                        <height>19</height>
-                       </size>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Unispace</family>
-                        <pointsize>14</pointsize>
-                        <kerning>true</kerning>
-                       </font>
-                      </property>
-                      <property name="mouseTracking">
-                       <bool>true</bool>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">background-color: #00FFFFFF;
+                    </property>
+                    <property name="text">
+                     <string>99%</string>
+                    </property>
+                    <property name="scaledContents">
+                     <bool>false</bool>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="9" column="1">
+                   <widget class="QLabel" name="hud_engine_fpsL">
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>19</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Unispace</family>
+                      <pointsize>14</pointsize>
+                      <kerning>true</kerning>
+                     </font>
+                    </property>
+                    <property name="mouseTracking">
+                     <bool>true</bool>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background-color: #00FFFFFF;
 color: #FFFFFF;</string>
-                      </property>
-                      <property name="text">
-                       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;0.0&lt;span style=&quot; vertical-align:super;&quot;&gt;MiB/s&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                      </property>
-                      <property name="scaledContents">
-                       <bool>false</bool>
-                      </property>
-                      <property name="alignment">
-                       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="2" column="2">
-                     <widget class="QLabel" name="hud_GPU">
-                      <property name="maximumSize">
-                       <size>
-                        <width>16777215</width>
-                        <height>19</height>
-                       </size>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Unispace</family>
-                        <pointsize>14</pointsize>
-                        <kerning>true</kerning>
-                       </font>
-                      </property>
-                      <property name="mouseTracking">
-                       <bool>false</bool>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">background-color: #00FFFFFF;
-color: #2e9762;
-</string>
-                      </property>
-                      <property name="text">
-                       <string>GPU</string>
-                      </property>
-                      <property name="scaledContents">
-                       <bool>false</bool>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="5" column="2">
-                     <widget class="QLabel" name="hud_cpu2">
-                      <property name="maximumSize">
-                       <size>
-                        <width>16777215</width>
-                        <height>19</height>
-                       </size>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Unispace</family>
-                        <pointsize>14</pointsize>
-                        <kerning>true</kerning>
-                       </font>
-                      </property>
-                      <property name="mouseTracking">
-                       <bool>false</bool>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">background-color: #00FFFFFF;
-color: #2e97cb;</string>
-                      </property>
-                      <property name="text">
-                       <string>CPU⁰</string>
-                      </property>
-                      <property name="scaledContents">
-                       <bool>false</bool>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="7" column="1">
-                     <widget class="QLabel" name="hud_vram_useL">
-                      <property name="maximumSize">
-                       <size>
-                        <width>16777215</width>
-                        <height>19</height>
-                       </size>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Unispace</family>
-                        <pointsize>14</pointsize>
-                        <kerning>true</kerning>
-                       </font>
-                      </property>
-                      <property name="mouseTracking">
-                       <bool>true</bool>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">background-color: #00FFFFFF;
-color: #FFFFFF;</string>
-                      </property>
-                      <property name="text">
-                       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;3.9&lt;span style=&quot; vertical-align:super;&quot;&gt;GiB&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                      </property>
-                      <property name="scaledContents">
-                       <bool>false</bool>
-                      </property>
-                      <property name="alignment">
-                       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="4" column="2">
-                     <widget class="QLabel" name="hud_cpu">
-                      <property name="maximumSize">
-                       <size>
-                        <width>16777215</width>
-                        <height>19</height>
-                       </size>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Unispace</family>
-                        <pointsize>14</pointsize>
-                        <kerning>true</kerning>
-                       </font>
-                      </property>
-                      <property name="mouseTracking">
-                       <bool>false</bool>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">background-color: #00FFFFFF;
-color: #2e97cb;</string>
-                      </property>
-                      <property name="text">
-                       <string>CPU</string>
-                      </property>
-                      <property name="scaledContents">
-                       <bool>false</bool>
-                      </property>
-                      <property name="wordWrap">
-                       <bool>false</bool>
-                      </property>
-                      <property name="margin">
-                       <number>0</number>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="9" column="1">
-                     <widget class="QLabel" name="hud_engine_fpsL">
-                      <property name="maximumSize">
-                       <size>
-                        <width>16777215</width>
-                        <height>19</height>
-                       </size>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Unispace</family>
-                        <pointsize>14</pointsize>
-                        <kerning>true</kerning>
-                       </font>
-                      </property>
-                      <property name="mouseTracking">
-                       <bool>true</bool>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">background-color: #00FFFFFF;
-color: #FFFFFF;</string>
-                      </property>
-                      <property name="text">
-                       <string>75&lt;sup&gt;FPS</string>
-                      </property>
-                      <property name="scaledContents">
-                       <bool>false</bool>
-                      </property>
-                      <property name="alignment">
-                       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="2" column="1">
-                     <widget class="QLabel" name="hud_gpu_usageL">
-                      <property name="maximumSize">
-                       <size>
-                        <width>16777215</width>
-                        <height>19</height>
-                       </size>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Unispace</family>
-                        <pointsize>14</pointsize>
-                        <kerning>true</kerning>
-                       </font>
-                      </property>
-                      <property name="mouseTracking">
-                       <bool>false</bool>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">background-color: #00FFFFFF;
+                    </property>
+                    <property name="text">
+                     <string>75&lt;sup&gt;FPS</string>
+                    </property>
+                    <property name="scaledContents">
+                     <bool>false</bool>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="1">
+                   <widget class="QLabel" name="hud_gpu_usageL">
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>19</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Unispace</family>
+                      <pointsize>14</pointsize>
+                      <kerning>true</kerning>
+                     </font>
+                    </property>
+                    <property name="mouseTracking">
+                     <bool>false</bool>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background-color: #00FFFFFF;
 color: #FFFFFF;
 </string>
-                      </property>
-                      <property name="text">
-                       <string>99%</string>
-                      </property>
-                      <property name="scaledContents">
-                       <bool>false</bool>
-                      </property>
-                      <property name="alignment">
-                       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="7" column="0">
-                     <widget class="QLabel" name="hud_vram_clockL">
-                      <property name="maximumSize">
-                       <size>
-                        <width>16777215</width>
-                        <height>19</height>
-                       </size>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Unispace</family>
-                        <pointsize>14</pointsize>
-                        <kerning>true</kerning>
-                       </font>
-                      </property>
-                      <property name="mouseTracking">
-                       <bool>true</bool>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">background-color: #00FFFFFF;
+                    </property>
+                    <property name="text">
+                     <string>99%</string>
+                    </property>
+                    <property name="scaledContents">
+                     <bool>false</bool>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="4" column="2">
+                   <widget class="QLabel" name="hud_cpu">
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>19</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Unispace</family>
+                      <pointsize>14</pointsize>
+                      <kerning>true</kerning>
+                     </font>
+                    </property>
+                    <property name="mouseTracking">
+                     <bool>false</bool>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background-color: #00FFFFFF;
+color: #2e97cb;</string>
+                    </property>
+                    <property name="text">
+                     <string>CPU</string>
+                    </property>
+                    <property name="scaledContents">
+                     <bool>false</bool>
+                    </property>
+                    <property name="wordWrap">
+                     <bool>false</bool>
+                    </property>
+                    <property name="margin">
+                     <number>0</number>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="7" column="1">
+                   <widget class="QLabel" name="hud_vram_useL">
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>19</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Unispace</family>
+                      <pointsize>14</pointsize>
+                      <kerning>true</kerning>
+                     </font>
+                    </property>
+                    <property name="mouseTracking">
+                     <bool>true</bool>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background-color: #00FFFFFF;
 color: #FFFFFF;</string>
+                    </property>
+                    <property name="text">
+                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;3.9&lt;span style=&quot; vertical-align:super;&quot;&gt;GiB&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                    </property>
+                    <property name="scaledContents">
+                     <bool>false</bool>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="10" column="0" colspan="3">
+                   <layout class="QVBoxLayout" name="verticalLayout_2">
+                    <item>
+                     <widget class="QLabel" name="hud_engine_verL">
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>9</height>
+                       </size>
                       </property>
-                      <property name="text">
-                       <string>1500&lt;sup&gt;Mhz</string>
-                      </property>
-                      <property name="scaledContents">
-                       <bool>false</bool>
-                      </property>
-                      <property name="alignment">
-                       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="9" column="2">
-                     <widget class="QLabel" name="hud_engine">
                       <property name="maximumSize">
                        <size>
                         <width>16777215</width>
-                        <height>19</height>
+                        <height>9</height>
                        </size>
                       </property>
                       <property name="font">
                        <font>
                         <family>Unispace</family>
-                        <pointsize>14</pointsize>
-                        <kerning>true</kerning>
+                        <pointsize>8</pointsize>
                        </font>
-                      </property>
-                      <property name="mouseTracking">
-                       <bool>false</bool>
                       </property>
                       <property name="styleSheet">
                        <string notr="true">background-color: #00FFFFFF;
 color: #eb5b5b;</string>
                       </property>
                       <property name="text">
-                       <string>VULKAN</string>
-                      </property>
-                      <property name="scaledContents">
-                       <bool>false</bool>
+                       <string>4.6</string>
                       </property>
                      </widget>
                     </item>
-                    <item row="1" column="2">
-                     <widget class="QLabel" name="hud_timeL">
+                    <item>
+                     <widget class="QLabel" name="hud_modelL">
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>9</height>
+                       </size>
+                      </property>
                       <property name="maximumSize">
                        <size>
                         <width>16777215</width>
-                        <height>21</height>
+                        <height>9</height>
                        </size>
                       </property>
                       <property name="font">
                        <font>
                         <family>Unispace</family>
-                        <pointsize>14</pointsize>
-                        <weight>50</weight>
-                        <italic>false</italic>
-                        <bold>false</bold>
-                       </font>
-                      </property>
-                      <property name="layoutDirection">
-                       <enum>Qt::LeftToRight</enum>
-                      </property>
-                      <property name="autoFillBackground">
-                       <bool>false</bool>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">background-color: #00FFFFFF;
-color: rgb(255, 255, 255);
-</string>
-                      </property>
-                      <property name="text">
-                       <string>23:59:00</string>
-                      </property>
-                      <property name="textFormat">
-                       <enum>Qt::PlainText</enum>
-                      </property>
-                      <property name="wordWrap">
-                       <bool>false</bool>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="0" column="2">
-                     <widget class="QLabel" name="hud_hud_versionL">
-                      <property name="maximumSize">
-                       <size>
-                        <width>16777215</width>
-                        <height>21</height>
-                       </size>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Unispace</family>
-                        <pointsize>14</pointsize>
-                        <weight>50</weight>
-                        <bold>false</bold>
-                        <kerning>true</kerning>
+                        <pointsize>8</pointsize>
                        </font>
                       </property>
                       <property name="styleSheet">
                        <string notr="true">background-color: #00FFFFFF;
-color: rgb(255, 255, 255);</string>
+color: #eb5b5b;</string>
                       </property>
                       <property name="text">
-                       <string>v0.4.0</string>
+                       <string>RADEON RX/NVIDIA GTX</string>
                       </property>
                      </widget>
                     </item>
-                    <item row="3" column="1">
-                     <widget class="QLabel" name="hud_gpu_clockL">
-                      <property name="maximumSize">
-                       <size>
-                        <width>16777215</width>
-                        <height>19</height>
-                       </size>
-                      </property>
+                    <item>
+                     <widget class="QLabel" name="hud_vulkan_driverL">
                       <property name="font">
                        <font>
                         <family>Unispace</family>
-                        <pointsize>14</pointsize>
-                        <kerning>true</kerning>
+                        <pointsize>8</pointsize>
+                        <weight>75</weight>
+                        <bold>true</bold>
                        </font>
-                      </property>
-                      <property name="mouseTracking">
-                       <bool>true</bool>
                       </property>
                       <property name="styleSheet">
                        <string notr="true">background-color: #00FFFFFF;
-color: #FFFFFF;</string>
+color: #eb5b5b;</string>
                       </property>
                       <property name="text">
-                       <string>1200&lt;sup&gt;Mhz&lt;/sup&gt;</string>
-                      </property>
-                      <property name="scaledContents">
-                       <bool>false</bool>
-                      </property>
-                      <property name="alignment">
-                       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                       <string>AMD RADV/ NVIDIA 390.xx</string>
                       </property>
                      </widget>
                     </item>
-                    <item row="2" column="0">
-                     <widget class="QLabel" name="hud_gpu_tempL">
+                    <item>
+                     <widget class="QLabel" name="hud_archL">
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>9</height>
+                       </size>
+                      </property>
                       <property name="maximumSize">
                        <size>
                         <width>16777215</width>
-                        <height>19</height>
+                        <height>9</height>
                        </size>
                       </property>
                       <property name="font">
                        <font>
                         <family>Unispace</family>
-                        <pointsize>14</pointsize>
-                        <kerning>true</kerning>
+                        <pointsize>8</pointsize>
                        </font>
-                      </property>
-                      <property name="mouseTracking">
-                       <bool>false</bool>
                       </property>
                       <property name="styleSheet">
                        <string notr="true">background-color: #00FFFFFF;
-color: #FFFFFF;</string>
+color: #eb5b5b;</string>
                       </property>
                       <property name="text">
-                       <string>40°C</string>
-                      </property>
-                      <property name="scaledContents">
-                       <bool>false</bool>
-                      </property>
-                      <property name="alignment">
-                       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                       <string>64bits</string>
                       </property>
                      </widget>
                     </item>
-                    <item row="9" column="0">
-                     <widget class="QLabel" name="hud_engine_msL">
+                    <item>
+                     <widget class="QLabel" name="hud_wineL">
+                      <property name="font">
+                       <font>
+                        <family>Unispace</family>
+                        <pointsize>8</pointsize>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">background-color: #00FFFFFF;
+color: #eb5b5b;</string>
+                      </property>
+                      <property name="text">
+                       <string>Wine/Proton</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="hud_ftimeL">
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>9</height>
+                       </size>
+                      </property>
                       <property name="maximumSize">
                        <size>
                         <width>16777215</width>
-                        <height>19</height>
+                        <height>9</height>
                        </size>
                       </property>
                       <property name="font">
                        <font>
                         <family>Unispace</family>
-                        <pointsize>14</pointsize>
-                        <kerning>true</kerning>
+                        <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="mouseTracking">
-                       <bool>true</bool>
+                      <property name="styleSheet">
+                       <string notr="true">background-color: #00FFFFFF;
+color: #eb5b5b;</string>
+                      </property>
+                      <property name="text">
+                       <string>frametime</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="hud_ftime_msL">
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>10</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Unispace</family>
+                        <pointsize>10</pointsize>
+                       </font>
                       </property>
                       <property name="styleSheet">
                        <string notr="true">background-color: #00FFFFFF;
 color: #FFFFFF;</string>
                       </property>
                       <property name="text">
-                       <string>13.3&lt;sup&gt;ms</string>
-                      </property>
-                      <property name="scaledContents">
-                       <bool>false</bool>
+                       <string>13.3 ms</string>
                       </property>
                       <property name="alignment">
-                       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                       </property>
                      </widget>
                     </item>
-                    <item row="8" column="1">
-                     <widget class="QLabel" name="hud_ram_useL">
-                      <property name="maximumSize">
+                    <item>
+                     <widget class="QLabel" name="hud_frame_gL">
+                      <property name="minimumSize">
                        <size>
-                        <width>16777215</width>
-                        <height>19</height>
+                        <width>0</width>
+                        <height>45</height>
                        </size>
                       </property>
                       <property name="font">
                        <font>
                         <family>Unispace</family>
-                        <pointsize>14</pointsize>
-                        <kerning>true</kerning>
                        </font>
                       </property>
-                      <property name="mouseTracking">
-                       <bool>true</bool>
+                      <property name="styleSheet">
+                       <string notr="true">background-color: #00FFFFFF;
+color: #00FF00;</string>
+                      </property>
+                      <property name="text">
+                       <string>----------------------------------</string>
+                      </property>
+                      <property name="margin">
+                       <number>14</number>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="hud_mediaL">
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>9</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>9</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Unispace</family>
+                        <pointsize>8</pointsize>
+                       </font>
                       </property>
                       <property name="styleSheet">
                        <string notr="true">background-color: #00FFFFFF;
 color: #FFFFFF;</string>
                       </property>
                       <property name="text">
-                       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;7.9&lt;span style=&quot; vertical-align:super;&quot;&gt;GiB&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                      </property>
-                      <property name="scaledContents">
-                       <bool>false</bool>
-                      </property>
-                      <property name="alignment">
-                       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                       <string>Playing: Artist - Song</string>
                       </property>
                      </widget>
                     </item>
                    </layout>
-                  </widget>
-                 </item>
-                </layout>
+                  </item>
+                  <item row="6" column="0">
+                   <widget class="QLabel" name="hud_io_writeL">
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>19</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Unispace</family>
+                      <pointsize>14</pointsize>
+                      <kerning>true</kerning>
+                     </font>
+                    </property>
+                    <property name="mouseTracking">
+                     <bool>true</bool>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background-color: #00FFFFFF;
+color: #FFFFFF;</string>
+                    </property>
+                    <property name="text">
+                     <string>0.0&lt;sup&gt;MiB/s</string>
+                    </property>
+                    <property name="scaledContents">
+                     <bool>false</bool>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="6" column="1">
+                   <widget class="QLabel" name="hud_io_readL">
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>19</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Unispace</family>
+                      <pointsize>14</pointsize>
+                      <kerning>true</kerning>
+                     </font>
+                    </property>
+                    <property name="mouseTracking">
+                     <bool>true</bool>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background-color: #00FFFFFF;
+color: #FFFFFF;</string>
+                    </property>
+                    <property name="text">
+                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;0.0&lt;span style=&quot; vertical-align:super;&quot;&gt;MiB/s&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                    </property>
+                    <property name="scaledContents">
+                     <bool>false</bool>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="2">
+                   <widget class="QLabel" name="hud_timeL">
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>21</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Unispace</family>
+                      <pointsize>14</pointsize>
+                      <weight>50</weight>
+                      <italic>false</italic>
+                      <bold>false</bold>
+                     </font>
+                    </property>
+                    <property name="layoutDirection">
+                     <enum>Qt::LeftToRight</enum>
+                    </property>
+                    <property name="autoFillBackground">
+                     <bool>false</bool>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background-color: #00FFFFFF;
+color: rgb(255, 255, 255);
+</string>
+                    </property>
+                    <property name="text">
+                     <string>23:59:00</string>
+                    </property>
+                    <property name="textFormat">
+                     <enum>Qt::PlainText</enum>
+                    </property>
+                    <property name="wordWrap">
+                     <bool>false</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="2">
+                   <widget class="QLabel" name="hud_hud_versionL">
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>21</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Unispace</family>
+                      <pointsize>14</pointsize>
+                      <weight>50</weight>
+                      <bold>false</bold>
+                      <kerning>true</kerning>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background-color: #00FFFFFF;
+color: rgb(255, 255, 255);</string>
+                    </property>
+                    <property name="text">
+                     <string>v0.5.X</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="0">
+                   <widget class="QLabel" name="hud_gpu_tempL">
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>19</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Unispace</family>
+                      <pointsize>14</pointsize>
+                      <kerning>true</kerning>
+                     </font>
+                    </property>
+                    <property name="mouseTracking">
+                     <bool>false</bool>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background-color: #00FFFFFF;
+color: #FFFFFF;</string>
+                    </property>
+                    <property name="text">
+                     <string>40°C</string>
+                    </property>
+                    <property name="scaledContents">
+                     <bool>false</bool>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="7" column="0">
+                   <widget class="QLabel" name="hud_vram_clockL">
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>19</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Unispace</family>
+                      <pointsize>14</pointsize>
+                      <kerning>true</kerning>
+                     </font>
+                    </property>
+                    <property name="mouseTracking">
+                     <bool>true</bool>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background-color: #00FFFFFF;
+color: #FFFFFF;</string>
+                    </property>
+                    <property name="text">
+                     <string>1500&lt;sup&gt;Mhz</string>
+                    </property>
+                    <property name="scaledContents">
+                     <bool>false</bool>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="8" column="2">
+                   <widget class="QLabel" name="hud_ramL">
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>19</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Unispace</family>
+                      <pointsize>14</pointsize>
+                      <kerning>true</kerning>
+                     </font>
+                    </property>
+                    <property name="mouseTracking">
+                     <bool>false</bool>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background-color: #00FFFFFF;
+color: #c26693;</string>
+                    </property>
+                    <property name="text">
+                     <string>RAM</string>
+                    </property>
+                    <property name="scaledContents">
+                     <bool>false</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="5" column="1">
+                   <widget class="QLabel" name="hud_cpu_usage2">
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>19</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Unispace</family>
+                      <pointsize>14</pointsize>
+                      <kerning>true</kerning>
+                     </font>
+                    </property>
+                    <property name="mouseTracking">
+                     <bool>false</bool>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background-color: #00FFFFFF;
+color: #FFFFFF;</string>
+                    </property>
+                    <property name="text">
+                     <string>99%</string>
+                    </property>
+                    <property name="scaledContents">
+                     <bool>false</bool>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="7" column="2">
+                   <widget class="QLabel" name="hud_vram">
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>19</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Unispace</family>
+                      <pointsize>14</pointsize>
+                      <kerning>true</kerning>
+                     </font>
+                    </property>
+                    <property name="mouseTracking">
+                     <bool>false</bool>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background-color: #00FFFFFF;
+color: #ad64c1;</string>
+                    </property>
+                    <property name="text">
+                     <string>VRAM</string>
+                    </property>
+                    <property name="scaledContents">
+                     <bool>false</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="9" column="2">
+                   <widget class="QLabel" name="hud_engine">
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>19</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Unispace</family>
+                      <pointsize>14</pointsize>
+                      <kerning>true</kerning>
+                     </font>
+                    </property>
+                    <property name="mouseTracking">
+                     <bool>false</bool>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background-color: #00FFFFFF;
+color: #eb5b5b;</string>
+                    </property>
+                    <property name="text">
+                     <string>VULKAN</string>
+                    </property>
+                    <property name="scaledContents">
+                     <bool>false</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="0">
+                   <widget class="QLabel" name="hud_gpu_wattsL">
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>19</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Unispace</family>
+                      <pointsize>14</pointsize>
+                      <kerning>true</kerning>
+                     </font>
+                    </property>
+                    <property name="mouseTracking">
+                     <bool>true</bool>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background-color: #00FFFFFF;
+color: #FFFFFF;</string>
+                    </property>
+                    <property name="text">
+                     <string>75&lt;sup&gt;w&lt;/sup&gt;</string>
+                    </property>
+                    <property name="textFormat">
+                     <enum>Qt::AutoText</enum>
+                    </property>
+                    <property name="scaledContents">
+                     <bool>false</bool>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="2">
+                   <widget class="QLabel" name="hud_GPU">
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>19</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Unispace</family>
+                      <pointsize>14</pointsize>
+                      <kerning>true</kerning>
+                     </font>
+                    </property>
+                    <property name="mouseTracking">
+                     <bool>false</bool>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background-color: #00FFFFFF;
+color: #2e9762;
+</string>
+                    </property>
+                    <property name="text">
+                     <string>GPU</string>
+                    </property>
+                    <property name="scaledContents">
+                     <bool>false</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="4" column="0">
+                   <widget class="QLabel" name="hud_cpu_tempL">
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>19</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Unispace</family>
+                      <pointsize>14</pointsize>
+                      <kerning>true</kerning>
+                     </font>
+                    </property>
+                    <property name="mouseTracking">
+                     <bool>false</bool>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background-color: #00FFFFFF;
+color: #FFFFFF;</string>
+                    </property>
+                    <property name="text">
+                     <string>60°C</string>
+                    </property>
+                    <property name="scaledContents">
+                     <bool>false</bool>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="5" column="2">
+                   <widget class="QLabel" name="hud_cpu2">
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>19</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Unispace</family>
+                      <pointsize>14</pointsize>
+                      <kerning>true</kerning>
+                     </font>
+                    </property>
+                    <property name="mouseTracking">
+                     <bool>false</bool>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background-color: #00FFFFFF;
+color: #2e97cb;</string>
+                    </property>
+                    <property name="text">
+                     <string>CPU⁰</string>
+                    </property>
+                    <property name="scaledContents">
+                     <bool>false</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="5" column="0">
+                   <widget class="QLabel" name="hud_cpu_clockL">
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>19</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Unispace</family>
+                      <pointsize>14</pointsize>
+                      <kerning>true</kerning>
+                     </font>
+                    </property>
+                    <property name="mouseTracking">
+                     <bool>true</bool>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background-color: #00FFFFFF;
+color: #FFFFFF;</string>
+                    </property>
+                    <property name="text">
+                     <string>3200&lt;sup&gt;Mhz&lt;/sup&gt;</string>
+                    </property>
+                    <property name="scaledContents">
+                     <bool>false</bool>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="1">
+                   <widget class="QLabel" name="hud_gpu_clockL">
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>19</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Unispace</family>
+                      <pointsize>14</pointsize>
+                      <kerning>true</kerning>
+                     </font>
+                    </property>
+                    <property name="mouseTracking">
+                     <bool>true</bool>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background-color: #00FFFFFF;
+color: #FFFFFF;</string>
+                    </property>
+                    <property name="text">
+                     <string>1200&lt;sup&gt;Mhz&lt;/sup&gt;</string>
+                    </property>
+                    <property name="scaledContents">
+                     <bool>false</bool>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="9" column="0">
+                   <widget class="QLabel" name="hud_engine_msL">
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>19</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Unispace</family>
+                      <pointsize>14</pointsize>
+                      <kerning>true</kerning>
+                     </font>
+                    </property>
+                    <property name="mouseTracking">
+                     <bool>true</bool>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background-color: #00FFFFFF;
+color: #FFFFFF;</string>
+                    </property>
+                    <property name="text">
+                     <string>13.3&lt;sup&gt;ms</string>
+                    </property>
+                    <property name="scaledContents">
+                     <bool>false</bool>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
                </widget>
               </item>
              </layout>
@@ -3087,7 +3111,6 @@ color: #FFFFFF;</string>
   <tabstop>VVSyncCombox</tabstop>
   <tabstop>GLVsyncCombox</tabstop>
   <tabstop>logCombox</tabstop>
-  <tabstop>logLine</tabstop>
   <tabstop>logButton</tabstop>
   <tabstop>hudscCombox</tabstop>
   <tabstop>posCombox</tabstop>

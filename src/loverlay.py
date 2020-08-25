@@ -25,7 +25,7 @@
 import sys
 import os
 import subprocess
-import res
+import res 
 from _parser import parser
 try: from setproctitle import setproctitle 
 except ImportError:
@@ -34,7 +34,7 @@ except ImportError:
 from PyQt5 import uic, QtGui
 from PyQt5.QtWidgets import QMainWindow, QApplication, QFileDialog, QColorDialog, QDialog, QMessageBox, QInputDialog
 from PyQt5.QtGui import QColor
-from PyQt5.QtCore import QSettings, QPoint, QSize
+from PyQt5.QtCore import QSettings, QPoint, QSize, QRect
 
 
 MH_PATH=os.environ['HOME']+"/.config/MangoHud/"
@@ -112,7 +112,10 @@ class MainControl(QMainWindow):
 		a=self.preview_u
 
 		self.posCombox.currentIndexChanged.connect(lambda:a("position"))
+		self.x_offset_sBox.valueChanged.connect(lambda:a("position"))
+		self.y_offset_sBox.valueChanged.connect(lambda:a("position"))
 		self.o_bg_hSlider.sliderReleased.connect(lambda:a("hud_bg_slider"))
+		
 		# gpu
 		self.gpunameLine.textChanged.connect(lambda:a("gpu_text"))
 		self.gpu_av_loadCBox.stateChanged.connect(lambda:a("gpu_av_load"))
@@ -144,6 +147,7 @@ class MainControl(QMainWindow):
 		self.other_graph_rButton.toggled.connect(lambda:a("frametime"))
 		self.other_histogram_rButton.toggled.connect(lambda:a("frametime"))
 		self.other_mediaCBox.stateChanged.connect(lambda:a("music"))
+		
 		# VK BASALT (uninplemented yet)
 	def run_test(self):
 		
@@ -189,10 +193,14 @@ class MainControl(QMainWindow):
 		# HUD & LOG TOGGLE... pos.
 		self.hudscCombox.setCurrentText(parser.get(mangoFile, "toggle_hud"))
 		self.logCombox.setCurrentText(parser.get(mangoFile, "toggle_logging"))
-		if parser.get(mangoFile, "output_folder") == "0": self.logLine.setText(os.environ['HOME'])
-		else: self.logLine.setText(parser.get(mangoFile, "output_folder"))
+		#if parser.get(mangoFile, "output_folder") == "0": self.logLine.setText(os.environ['HOME'])
+		#else: self.logLine.setText(parser.get(mangoFile, "output_folder"))
+		if parser.get(mangoFile, "output_folder") == "0": self.logButton.setToolTip(os.environ['HOME'])
+		else: self.logButton.setToolTip(parser.get(mangoFile, "output_folder"))
+		
 		self.posCombox.setCurrentText(parser.get(mangoFile, "position"))
-
+		self.x_offset_sBox.setValue(int(parser.get(mangoFile, "offset_x")))
+		self.y_offset_sBox.setValue(int(parser.get(mangoFile, "offset_y")))
 		
 		# GPU box ------------------------
 		if parser.get(mangoFile, "gpu_text") == "0": self.gpunameLine.setText("GPU")
@@ -291,10 +299,12 @@ class MainControl(QMainWindow):
 		else: self.fpsSpinbox.setEnabled(False)
 		
 	def selectFile(self):
-		a=self.logLine.text()
-		self.logLine.setText(QFileDialog.getExistingDirectory(self, "Select directory", os.environ['HOME']))
-		if self.logLine.text() == "": self.logLine.setText(a)
-		
+		LOG_DIR=self.logButton.toolTip()
+		NEW_LOGDIR=QFileDialog.getExistingDirectory(self, "Select directory", os.environ['HOME'])
+		self.logButton.setToolTip(NEW_LOGDIR)
+		if self.logButton.toolTip() == "": self.logButton.setToolTip (LOG_DIR)
+		self.logButton.setFocus(True)
+
 	def _unblank(self, line, text):
 		if line.text() == "": line.setText(text)
 	
@@ -351,19 +361,6 @@ class MainControl(QMainWindow):
 			self.hud_colors(self.cpu_colorButton, *cpu_color_labels)
 			self.hud_colors(self.o_winecolorButton, self.hud_wineL)
 			
-		if string == "load" or string == "position":
-			
-			a=self.posCombox.currentText()
-			tl=self.hud_wtop, self.hud_wleft
-			tr=self.hud_wtop, self.hud_wright
-			bl=self.hud_wbuttom, self.hud_wleft
-			br=self.hud_wbuttom, self.hud_wright
-			if a == "top-left": self.hide_all(tl), self.show_all(br)
-			if a == "top-right": self.hide_all(tr), self.show_all(bl)
-			if a == "bottom-left": self.hide_all(bl), self.show_all(tr)
-			if a == "bottom-right": self.hide_all(br), self.show_all(tl)
-			
-					
 		if string == "hud_version" or string == "load": self.hud_hud_versionL.setVisible(self.other_hud_verCBox.isChecked())
 		if string == "time" or string == "load": self.hud_timeL.setVisible(self.other_timeCBox.isChecked())
 
@@ -468,10 +465,24 @@ class MainControl(QMainWindow):
 			b=a.find("#")
 			c=a[b:b+3]
 			self.HUD_rectangle.setStyleSheet(a.replace(c, "#"+alpha))
+			
+		a=self.posCombox.currentText()
+		x=self.x_offset_sBox.value()
+		y=self.y_offset_sBox.value() 
+		if a== "top-right": x=self.HUD_frame.geometry().width()-self.HUD_rectangle.geometry().width()+x
+		elif a== "bottom-left": y=self.HUD_frame.geometry().height()-self.HUD_rectangle.geometry().height()+y
+		elif a== "bottom-right": 
+			x=self.HUD_frame.geometry().width()-self.HUD_rectangle.geometry().width()+x
+			y=self.HUD_frame.geometry().height()-self.HUD_rectangle.geometry().height()+y
+		else: pass
+		self.HUD_rectangle.move(x,y)
 		
 		a=0
 		b=0
-		del a, b
+		x=0
+		y=0
+		del a, b, x, y
+
 			
 	def hide_all(self, a):
 		for i in range (len(a)):
@@ -507,8 +518,10 @@ class MainControl(QMainWindow):
 		# HUD & log accels
 		mangoFile.write("\n"+"toggle_hud="+self.hudscCombox.currentText())
 		mangoFile.write("\n"+"toggle_logging="+self.logCombox.currentText())
-		mangoFile.write("\n"+"output_folder="+self.logLine.text())
+		mangoFile.write("\n"+"output_folder="+self.logButton.toolTip())
 		mangoFile.write("\n"+"position="+self.posCombox.currentText())
+		if self.x_offset_sBox.value() != 0: mangoFile.write("\noffset_x="+str(self.x_offset_sBox.value()))
+		if self.y_offset_sBox.value() != 0: mangoFile.write("\noffset_y="+str(self.y_offset_sBox.value()))
 		if self.hiddencBox.isChecked() == True: mangoFile.write("\nno_display")
 		
 		# GPU box 
@@ -574,6 +587,9 @@ class MainControl(QMainWindow):
 		mangoFile.write("\n")
 		mangoFile.close()
 		subprocess.run(["mv "+MH_PATH+"."+file+".conf "+MH_PATH+file+".conf"], shell=True)
+	
+	def resizeEvent(self, e):
+		self.preview_u("position")
 	
 	def closeEvent(self, e):
 			
