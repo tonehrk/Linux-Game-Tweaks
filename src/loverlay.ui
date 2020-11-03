@@ -76,7 +76,7 @@
        <number>0</number>
       </property>
       <property name="documentMode">
-       <bool>false</bool>
+       <bool>True</bool>
       </property>
       <property name="tabBarAutoHide">
        <bool>false</bool>
