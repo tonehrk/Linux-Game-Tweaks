@@ -54,7 +54,7 @@ class MainControl(QMainWindow):
 		self.runButton.clicked.connect(self.run_test)
 		self.setWindowTitle("LOverlay - "+self.tabWidget.tabText(self.tabWidget.currentIndex()))
 		QtGui.QFontDatabase.addApplicationFont(":/fonts/unispace_bd.ttf")
-		self.settings = QSettings( 'Linux', 'LOverlay') 
+		self.settings = QSettings( 'LOverlay', 'metrics') 
 		self.resize(self.settings.value("size", QSize(996, 763)))
 		self.move(self.settings.value("pos", QPoint(50, 50)))
 		self.aboutButton.clicked.connect(lambda: AboutDialog(self).show())
