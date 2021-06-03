@@ -21,19 +21,26 @@ For: MangoHUD
 
 
 ## Install/Uninstall
-Run install.sh via terminal with "--install" or "--uninstall" option as sudo
+
+```
+git clone https://github.com/tonehrk/LOverlay.git
+cd LOverlay
+```
+
+& run install.sh via terminal with "--install" or "--uninstall" option as sudo
 
 Install:
 ```
-sudo install.sh --install
+sudo sh install.sh --install
 ```
 Uninstall:
 ```
-sudo install.sh --uninstall
+sudo sh install.sh --uninstall
 ```
 
 ## Run without installing
-In "src" directory, run via terminal: 
+After git clone, run via terminal: 
 ```
+cd src
 python loverlay.py
 ```
