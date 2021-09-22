@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>About LOverlay</string>
+   <string>About Linux Game-Tweaks</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="2" column="0">
@@ -51,7 +51,7 @@
           <enum>QFrame::Plain</enum>
          </property>
          <property name="text">
-          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;Project &amp;quot;LOverlay&amp;quot; (Linux Overlay) by: Tony San Agustin&lt;/p&gt;&lt;p&gt;About: I am a computer fanatic, I am not a professional programmer far from it. &lt;/p&gt;&lt;p&gt;In fact, my main career is &amp;quot;Music&amp;quot;.&lt;br/&gt;I like to write code and I do it with pleasure, but sometimes there just isn't much time. &lt;/p&gt;&lt;p&gt;In fact I plan to keep improving this app and add support for vkBasalt as well.&lt;br/&gt;This application is based on a principle about &lt;a href=&quot;https://github.com/benjamimgois/goverlay&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;GOverlay&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;If you think my effort is worth it and you would like to support me: &lt;a href=&quot;paypal.me/tonehrk&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;PayPal&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;LOverlay: &lt;a href=&quot;https://github.com/tonehrk/LOverlay&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;Github&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;AppIcon by: &lt;a href=&quot;https://www.flaticon.com/authors/freepik&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;freepik on Flaticon.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;MangoHUD project by: flightlessmango&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/flightlessmango&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;Github: flightlessmango &lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;Project &amp;quot;Linux Game-Tweaks&amp;quot; by: Tony San Agustin&lt;/p&gt;&lt;p&gt;About: I am a computer fanatic, I am not a professional programmer far from it. &lt;/p&gt;&lt;p&gt;In fact, my main career is &amp;quot;Music&amp;quot;.&lt;br/&gt;I like to write code and I do it with pleasure, but sometimes there just isn't much time. &lt;/p&gt;&lt;p&gt;In fact I plan to keep improving this app and add support for vkBasalt as well.&lt;br/&gt;This application is based on a principle about &lt;a href=&quot;https://github.com/benjamimgois/goverlay&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;GOverlay&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;If you think my effort is worth it and you would like to support me: &lt;a href=&quot;paypal.me/tonehrk&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;PayPal&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;LOverlay: &lt;a href=&quot;https://github.com/tonehrk/LOverlay&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;Github&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;AppIcon by: &lt;a href=&quot;https://www.flaticon.com/authors/freepik&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;freepik on Flaticon.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;MangoHUD project by: flightlessmango&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/flightlessmango&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;Github: flightlessmango &lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
          <property name="textInteractionFlags">
           <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
@@ -72,7 +72,7 @@
    <item row="0" column="0">
     <widget class="QLabel" name="label_2">
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/icons/cake-piece.png&quot;/&gt;&lt;span style=&quot; font-size:26pt; font-weight:600;&quot;&gt;LOverlay&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/icons/cake-piece.png&quot;/&gt;&lt;span style=&quot; font-size:26pt; font-weight:600;&quot;&gt;Linux Game-Tweaks&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
    </item>
