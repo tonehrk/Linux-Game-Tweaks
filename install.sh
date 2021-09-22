@@ -23,7 +23,7 @@ else
 			/usr/bin/install -vm644 -D $DIR/icons/loverlay.svg /usr/share/icons/hicolor/scalable/apps
 			/usr/bin/install -vm644 -D $DIR/icons/loverlay.png /usr/share/pixmaps
 			
-			/usr/bin/install -vm755 $DIR/bin/linux-game-tweakts /usr/bin
+			/usr/bin/install -vm755 $DIR/bin/linux-game-tweaks /usr/bin
 			/usr/bin/install -vm644 -D $DIR/bin/linux-game-tweaks.desktop /usr/share/applications
 			/usr/bin/install -vm644 -D $DIR/bin/linux-game-tweaks.metainfo.xml /usr/share/metainfo
 			echo "L Game-Tweaks successfully installed."
