@@ -23,8 +23,8 @@ For: MangoHUD
 ## Install/Uninstall
 
 ```
-git clone https://github.com/tonehrk/LOverlay.git
-cd LOverlay
+git clone https://github.com/tonehrk/Linux-Game-Tweaks.git
+cd Linux-Game-Tweaks
 ```
 
 & run install.sh via terminal with "--install" or "--uninstall" option as sudo
@@ -42,5 +42,5 @@ sudo sh install.sh --uninstall
 After git clone, run via terminal: 
 ```
 cd src
-python loverlay.py
+python linux-game-tweaks.py
 ```
