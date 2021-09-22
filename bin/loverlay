@@ -1,2 +1,2 @@
 #!/bin/sh
-python /usr/lib/loverlay/loverlay.py
+python /usr/lib/loverlay/linux-game-tweaks.py
