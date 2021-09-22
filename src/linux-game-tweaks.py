@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-#  LOverlay.py
+#  Linux Game-Tweaks.py
 #  
-#  Copyright 2020 Tony San Agustin <hormone@live.com.mx>
+#  Copyright 2021 Tony San Agustin <hormone@live.com.mx>
 #  
 #  This program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -48,13 +48,13 @@ class MainControl(QMainWindow):
 		
 	def __init__(self):
 		super(MainControl, self).__init__()
-		uic.loadUi(OWN_PATH+"/loverlay.ui", self)
+		uic.loadUi(OWN_PATH+"/linux-game-tweaks.ui", self)
 
 		self.setWindowIcon(QtGui.QIcon(":/icons/cake-piece.svg"))
 		self.runButton.clicked.connect(self.run_test)
-		self.setWindowTitle("LOverlay - "+self.tabWidget.tabText(self.tabWidget.currentIndex()))
+		self.setWindowTitle("Linux Game-Tweaks - "+self.tabWidget.tabText(self.tabWidget.currentIndex()))
 		QtGui.QFontDatabase.addApplicationFont(":/fonts/unispace_bd.ttf")
-		self.settings = QSettings( 'LOverlay', 'metrics') 
+		self.settings = QSettings( 'Linux Game-Tweaks', 'metrics') 
 		self.resize(self.settings.value("size", QSize(996, 763)))
 		self.move(self.settings.value("pos", QPoint(50, 50)))
 		self.aboutButton.clicked.connect(lambda: AboutDialog(self).show())
@@ -608,7 +608,7 @@ class AboutDialog (QDialog):
 
 if __name__=='__main__':
 	app = QApplication(sys.argv)
-	try: setproctitle ("loverlay")
+	try: setproctitle ("linux-game-tweaks")
 	except: pass
 	GUI = MainControl()
 
