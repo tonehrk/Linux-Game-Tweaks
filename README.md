@@ -1,5 +1,5 @@
 
-# LOverlay
+# Linux Game-Tweaks
 
 ![](src/res/cake-piece.png) Linux Overlay configurations (OpenGL and Vulkan).
 
