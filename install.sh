@@ -1,5 +1,5 @@
 #!/bin/bash
-lib_dir="/usr/lib/loverlay"
+lib_dir="/usr/lib/linux-game-tweaks"
 DIR=$(cd `dirname $0` && pwd)
 if [ -z $1 ]; then
 set "x"
@@ -10,8 +10,8 @@ if [[ $EUID > 0 ]]; then
 	exit 1
 else
 	if [ $1 = "--install" ]; then
-		if test -f "/usr/bin/loverlay"; then
-			echo "LOverlay it's already installed. If you are updating, please remove and reinstall."
+		if test -f "/usr/bin/linux-game-tweaks"; then
+			echo "Linux Game-Tweaks it's already installed. If you are updating, please remove and reinstall."
 		else
 			echo "Installing"
 			echo "copying files"
@@ -23,10 +23,10 @@ else
 			/usr/bin/install -vm644 -D $DIR/icons/loverlay.svg /usr/share/icons/hicolor/scalable/apps
 			/usr/bin/install -vm644 -D $DIR/icons/loverlay.png /usr/share/pixmaps
 			
-			/usr/bin/install -vm755 $DIR/bin/loverlay /usr/bin
-			/usr/bin/install -vm644 -D $DIR/bin/loverlay.desktop /usr/share/applications
-			/usr/bin/install -vm644 -D $DIR/bin/loverlay.metainfo.xml /usr/share/metainfo
-			echo "LOverlay successfully installed."
+			/usr/bin/install -vm755 $DIR/bin/linux-game-tweakts /usr/bin
+			/usr/bin/install -vm644 -D $DIR/bin/linux-game-tweaks.desktop /usr/share/applications
+			/usr/bin/install -vm644 -D $DIR/bin/linux-game-tweaks.metainfo.xml /usr/share/metainfo
+			echo "L Game-Tweaks successfully installed."
 		fi
 	elif [ $1 = "--uninstall" ]; then
 		echo "Are you sure? (y/n)"
@@ -35,8 +35,8 @@ else
 		then
 			echo "removing"
 			rm -r $lib_dir
-			rm /usr/bin/loverlay
-			rm /usr/share/applications/loverlay.desktop
+			rm /usr/bin/linux-game-tweaks
+			rm /usr/share/applications/linux-game-tweaks.desktop
 			rm /usr/share/icons/hicolor/scalable/apps/loverlay.svg
 			rm /usr/share/pixmaps/loverlay.png
 			echo "... OK"
