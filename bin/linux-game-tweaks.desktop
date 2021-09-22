@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Linux Game-Tweaks
-Exec=/usr/bin/loverlay
+Exec=/usr/bin/linux-game-tweaks
 Type=Application
 StartupNotify=true
 Comment=Linux Game tweaks
