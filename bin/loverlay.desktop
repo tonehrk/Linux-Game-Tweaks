@@ -1,12 +1,12 @@
 [Desktop Entry]
-Name=LOverlay
+Name=Linux Game-Tweaks
 Exec=/usr/bin/loverlay
 Type=Application
 StartupNotify=true
-Comment=Linux Overlay game configurations
-Path=/home/tony/workspace/programas/OverlayControl
+Comment=Linux Game tweaks
+Path=
 Terminal=false
 Categories=Qt;Utility;
 Icon=loverlay
 GenericName=Linux Overlay Configurations
-Comment[es_MX]=Configurar Overlays para Juegos
+Comment[es_MX]=Tweaks para juegos
