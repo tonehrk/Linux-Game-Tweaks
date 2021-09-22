@@ -27,6 +27,11 @@ git clone https://github.com/tonehrk/Linux-Game-Tweaks.git
 cd Linux-Game-Tweaks
 ```
 
+Give execute permissions
+```
+chmod +x install.sh
+```
+
 & run install.sh via terminal with "--install" or "--uninstall" option as sudo
 
 Install:
